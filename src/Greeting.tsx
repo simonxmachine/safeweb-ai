@@ -5,7 +5,7 @@ type Props = {
 };
 
 function Greeting({ name }: Props) {
-  return <p> Hello there, {name}</p>;
+  return <p className="text-black bg-white"> Hello there, {name}</p>;
 }
 
 export { Greeting };

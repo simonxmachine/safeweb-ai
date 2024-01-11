@@ -5,6 +5,11 @@ import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import {Greeting} from './Greeting';
+import Navbar from './Navbar';
+import Pricing from './Pricing';
+import Boxes from './Boxes';
+import NewForm from './NewForm';
+import { Tweets } from './Tweets';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,16 +44,26 @@ function App() {
   
   return (
     <div className='App'>
-      Hello World!
+
+      <Navbar />
+      <Greeting name= { hisName }/>
+
+
       {response && <div>{response}</div>}
 
-      <Greeting name= { hisName }/>
+
+      <NewForm />
+
+      <Tweets/>
+
+      <Boxes />
+
+
+      {/* <Pricing /> */}
     </div>
     
   )
 }
-
-
 
 
 export default App
