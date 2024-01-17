@@ -1,50 +1,36 @@
 import * as React from "react";
 import logo from "./assets/react.svg"; // Import your logo image
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import GlobalStyles from "@mui/material/GlobalStyles";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function Navbar() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  return (
+    <>
+      <nav>
+        <Link to="/" className="site-title">
+          <img src={logo} alt="Logo" className="logo" />
+        </Link>
+        <ul className="nav-links">
+          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/about">About</CustomLink>
+          <CustomLink to="/contact">Contact</CustomLink>
+        </ul>
+      </nav>
+    </>
+  );
+}
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
-    <nav>
-      <img src={logo} alt="Logo" className="logo" />
-      <Button
-        className="mr-20"
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      >
-        Dashboard
-      </Button>
-
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
-    </nav>
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
   );
 }
 

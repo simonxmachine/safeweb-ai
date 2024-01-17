@@ -2,55 +2,46 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
-import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import {Greeting} from './Greeting';
 import Navbar from './Navbar';
-import Pricing from './Pricing';
 import Boxes from './Boxes';
 import NewForm from './NewForm';
+import MappingData from './MappingData';
+import Chatbox from './Chatbox';
 import { Tweets } from './Tweets';
+import ProductList from './ProductList';
+import { Link, Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Home from "./pages/Home";
+
 
 function App() {
   const [count, setCount] = useState(0)
   const [response, setResponse] = useState("This is standard response")
 
-  const hisName = "lee"
+  const hisName = "leeeeee"
 
-  // useEffect(() => {
-  //   const makeRequest = async () => {
-  //     try {
-  //       const response = await fetch('https://www.creditmatch.ai/ask', {
-  //         method: 'POST',
-  //         headers: {
-  //           'Content-Type': 'application/json', // Set the Content-Type header to application/json
-  //           'password': 'abcde111222333'
-  //         },
-  //         body: JSON.stringify({ message: "How much is the property?" }), // Convert the body to JSON format
-  //       });
 
-  //       const data = await response.text(); // Assuming string response
-  //       setResponse(data);
-  //       console.log(data)
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //       setResponse('Error: Could not fetch data');
-  //     }
-  //   };
-  
-  //   makeRequest();
-  // }, []);
-
-  
   return (
-    <div className='App'>
-
+    <div>
+      
       <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
       <Greeting name= { hisName }/>
-
-
       {response && <div>{response}</div>}
 
+      <Chatbox />
+
+      <ProductList />
+
+      <MappingData />
 
       <NewForm />
 
@@ -58,8 +49,6 @@ function App() {
 
       <Boxes />
 
-
-      {/* <Pricing /> */}
     </div>
     
   )
