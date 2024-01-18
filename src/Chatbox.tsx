@@ -43,3 +43,63 @@ const Chatbox = () => {
 };
 
 export default Chatbox;
+
+//This is the original code from Bard
+
+// import React, { useState, useEffect } from 'react';
+
+// interface Message {
+//   type: 'user' | 'api';
+//   message: string;
+// }
+
+// interface ChatBoxProps {}
+
+// const ChatBox: React.FC<ChatBoxProps> = () => {
+//   const [messages, setMessages] = useState<Message[]>([]);
+//   const [inputMessage, setInputMessage] = useState('');
+
+//   const handleSendMessage = async () => {
+//     try {
+//       const response = await fetch('/your-api-endpoint', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ message: inputMessage }),
+//       });
+//       const data = await response.json();
+
+//       setMessages((prevMessages) => [
+//         ...prevMessages,
+//         { type: 'user', message: inputMessage },
+//         { type: 'api', message: data.response },
+//       ]);
+//       setInputMessage('');
+//     } catch (error) {
+//       console.error('Error sending message:', error);
+//       // Handle error gracefully, e.g., display an error message to the user
+//     }
+//   };
+
+//   return (
+//     <div className="chatbox">
+//       <div className="chat-history" style={{ overflowY: 'scroll', maxHeight: '500px' }}>
+//         {messages.map((message) => (
+//           <div
+//             className={`message ${message.type}`}
+//             key={message.message}
+//           >
+//             {message.message}
+//           </div>
+//         ))}
+//       </div>
+//       <input
+//         type="text"
+//         value={inputMessage}
+//         onChange={(e) => setInputMessage(e.target.value)}
+//       />
+//       <button onClick={handleSendMessage}>Send</button>
+//     </div>
+//   );
+// };
+
+// export default ChatBox;

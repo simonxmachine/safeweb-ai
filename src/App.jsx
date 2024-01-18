@@ -7,13 +7,13 @@ import Navbar from './Navbar';
 import Boxes from './Boxes';
 import NewForm from './NewForm';
 import MappingData from './MappingData';
-import Chatbox from './Chatbox';
-import { Tweets } from './Tweets';
+// import Chatbox from './Chatbox';
 import ProductList from './ProductList';
 import { Link, Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Chatbox from './Chatbox2';
 
 
 function App() {
@@ -34,20 +34,20 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Greeting name= { hisName }/>
-      {response && <div>{response}</div>}
+      {/* <Greeting name= { hisName }/>
+      {response && <div>{response}</div>} */}
+     <div className='align-center items-center justify-center content-center'>
 
       <Chatbox />
-
+      </div>
+{/* 
       <ProductList />
 
       <MappingData />
 
       <NewForm />
 
-      <Tweets/>
-
-      <Boxes />
+      <Boxes /> */}
 
     </div>
     
