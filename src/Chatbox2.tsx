@@ -16,13 +16,9 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
     setMessages((prevMessages) => [
       ...prevMessages,
       { type: "user", message: inputMessage },
-    ]);
-    setInputMessage("");
-
-    setMessages((prevMessages) => [
-      ...prevMessages,
       { type: "api", message: "Agent is thinking..." },
     ]);
+    setInputMessage("");
 
     try {
       const response = await fetch("https://www.creditmatch.ai/ask", {
@@ -34,15 +30,30 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
         body: JSON.stringify({ message: inputMessage }), // Convert the body to JSON format
       });
 
-      //       const data = await response.text(); // Assuming string response
-      //       setResponse(data);
-      //       console.log(data)
       const data = await response.text();
+
+      fetch("https://www.boredapi.com/api/activity/")
+        .then((response2) => {
+          if (!response2.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response2.json();
+        })
+        .then((data2) => {
+          console.log(data2);
+        })
+        .catch((error) => {
+          console.error(
+            "There has been a problem with your fetch operation:",
+            error
+          );
+        });
+
+      console.log(data);
 
       setMessages((prevMessages) =>
         prevMessages.slice(0, -1).concat({ type: "api", message: data })
       );
-      setInputMessage("");
     } catch (error) {
       console.error("Error sending message:", error);
       // Handle error gracefully, e.g., display an error message to the user
@@ -76,12 +87,13 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           minHeight: "300px",
           maxHeight: "300px",
           padding: "20px",
+          borderRadius: "6px",
         }}
       >
         {messages.map((message) => (
           <div key={message.message}>
             <div
-              className={`label ${message.type}`}
+              //   className={`label ${message.type}`}
               style={{
                 // backgroundColor: message.type === "user" ? "green" : "blue",
                 color: message.type === "user" ? "green" : "blue", // Assume white text for contrast
@@ -94,7 +106,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
               {message.type === "user" ? "User" : "Agent"}
             </div>
             <div
-              className={`message ${message.type}`}
+              //   className={`message ${message.type}`}
               style={{
                 textAlign: message.type === "user" ? "right" : "left",
                 marginBottom: "20px",
