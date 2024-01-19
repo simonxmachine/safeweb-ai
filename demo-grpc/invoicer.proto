@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+option go_package = "github.com/simonxmachine/grpc-testing/invoicer";
 
 
 message Amount{
@@ -16,7 +16,6 @@ message CreateRequest{
 message CreateResponse{
     bytes pdf = 1;
     bytes docx = 2;
-
 }
 
 
