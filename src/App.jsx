@@ -14,6 +14,11 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Chatbox from './Chatbox2';
+import BarChart from './BarChart';
+import LineChart from './LineChart';
+import SegmentChart from './SegmentChart';
+import DoughnutChart from './DoughnutChart';
+import Scatterplot from './Scatterplot';
 
 
 function App() {
@@ -36,9 +41,34 @@ function App() {
 
       {/* <Greeting name= { hisName }/>
       {response && <div>{response}</div>} */}
-     <div className='align-center items-center justify-center content-center'>
+     <div className='align-center w-[100vw] items-center justify-center content-center'>
 
       <Chatbox />
+
+
+      <div className='w-[70%] mt-20 justify-center space-y-20 mx-auto align-middle items-center'>
+       
+       
+      <div className='grid grid-cols-3 gap-10 justify-center align-middle content-center items-center'>
+        <div className='col-span-2'>
+          <BarChart/>
+        </div>
+        <div className='col-span-1'>
+          <DoughnutChart />
+        </div>
+      </div>
+
+  
+        <Scatterplot />
+
+        <LineChart />
+        <SegmentChart />
+
+
+
+      </div>
+
+
       </div>
 {/* 
       <ProductList />
