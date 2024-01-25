@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Typewrite from "./Typewrite";
 
 interface Message {
   type: "user" | "api";
@@ -16,7 +17,10 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
     setMessages((prevMessages) => [
       ...prevMessages,
       { type: "user", message: inputMessage },
-      { type: "api", message: "Agent is thinking..." },
+      {
+        type: "api",
+        message: "Agent is thinking...",
+      },
     ]);
     setInputMessage("");
 
