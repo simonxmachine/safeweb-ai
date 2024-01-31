@@ -19,6 +19,7 @@ import LineChart from './LineChart';
 import SegmentChart from './SegmentChart';
 import DoughnutChart from './DoughnutChart';
 import Scatterplot from './Scatterplot';
+import XgBoostPredict from './XgBoostPredict';
 
 
 function App() {
@@ -45,10 +46,13 @@ function App() {
 
       <Chatbox />
 
+    
+      <XgBoostPredict />
 
       <div className='w-[70%] mt-20 justify-center space-y-20 mx-auto align-middle items-center'>
        
-       
+
+
       <div className='grid grid-cols-3 gap-10 justify-center align-middle content-center items-center'>
         <div className='col-span-2'>
           <BarChart/>

@@ -23,7 +23,7 @@ ChartJS.register(
   Filler
 );
 
-const scores = [428000, 46000, 94000, 33000];
+const scores = [428000, 96000, 94000, 33000];
 const labels = ["Benign", "Defacement", "Phishing", "Malware"];
 
 const options = {

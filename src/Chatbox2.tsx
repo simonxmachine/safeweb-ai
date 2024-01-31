@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Typewrite from "./Typewrite";
 
 interface Message {
   type: "user" | "api";
