@@ -77,7 +77,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col justify-center items-center h-[60vh] border-black border-2">
       <div
         className="chat-history"
         ref={chatHistoryRef}

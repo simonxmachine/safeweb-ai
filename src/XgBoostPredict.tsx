@@ -6,7 +6,8 @@ const XgBoostPredict = () => {
   const handleSendMessage = async () => {
     try {
       const response = await fetch(
-        `https://b1fqrfoxwg.execute-api.us-east-1.amazonaws.com/xg_predict`,
+        // `https://b1fqrfoxwg.execute-api.us-east-1.amazonaws.com/xg_predict`,
+        `https://ssqkmxwwhl.execute-api.us-east-1.amazonaws.com/xg_predict`,
         {
           method: "POST",
           headers: {
@@ -23,7 +24,7 @@ const XgBoostPredict = () => {
       );
 
       console.log();
-      const data = await response.text();
+      const data = await response.json();
 
       console.log(data);
     } catch (error) {
@@ -38,9 +39,9 @@ const XgBoostPredict = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center ">
-      <div className="flex flex-row mt-5 gap-5 w-[80%] justify-center items-center">
-        HELLO HELLO!
+    <div className="flex flex-col justify-center items-center h-[60vh] text-3xl border-black border-2">
+      See if Your URL is Malicious!
+      <div className="flex flex-row mt-5 gap-5 w-[80%] justify-center items-center text-base">
         <input
           type="text"
           value={inputMessage} // Use the inputMessage state here

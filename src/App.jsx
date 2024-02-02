@@ -20,6 +20,8 @@ import SegmentChart from './SegmentChart';
 import DoughnutChart from './DoughnutChart';
 import Scatterplot from './Scatterplot';
 import XgBoostPredict from './XgBoostPredict';
+import HeatMap from './HeatMap';
+import ConfusionMatrix from './ConfusionMatrix';
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
   const [response, setResponse] = useState("This is standard response")
 
   const hisName = "leeeeee"
+  const isMediumScreen = window.innerWidth >= 600;
 
 
   return (
@@ -44,30 +47,59 @@ function App() {
       {response && <div>{response}</div>} */}
      <div className='align-center w-[100vw] items-center justify-center content-center'>
 
-      <Chatbox />
+         
+     <XgBoostPredict />
 
-    
-      <XgBoostPredict />
 
-      <div className='w-[70%] mt-20 justify-center space-y-20 mx-auto align-middle items-center'>
+      <div className='w-[100%] px-10 justify-center space-y-20 mx-auto align-middle items-center'>
        
 
-
-      <div className='grid grid-cols-3 gap-10 justify-center align-middle content-center items-center'>
+{/* 
+      <div className='mt-20 grid grid-cols-3 gap-10 justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
         <div className='col-span-2'>
           <BarChart/>
         </div>
         <div className='col-span-1'>
           <DoughnutChart />
         </div>
+      </div> */}
+
+    <div className={isMediumScreen ? "grid grid-cols-3 gap-10 mt-20 justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2" : "flex flex-col gap-20 mt-20 justify-center align-middle content-center items-center  border-black border-2"}>
+          <div className={isMediumScreen ? 'col-span-2' : 'w-[100%]'}>
+            <BarChart />
+          </div>
+          <div className={isMediumScreen ? 'col-span-1' : 'w-[75%]'}>
+            <DoughnutChart />
+          </div>
+        </div>
+
+
+
+      <div className='flex justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
+
+        <Scatterplot />
+      
       </div>
 
-  
-        <Scatterplot />
 
-        <LineChart />
+      <div className='flex  justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
+
+        <HeatMap />
+
+        </div>
+
+
+        <div className='flex  justify-center align-middle content-center items-center h-[100%] py-20 text-3xl border-black border-2'>
+
+        <ConfusionMatrix />
+
+        </div>
+
+
+        <Chatbox />
+        {/* <LineChart />
         <SegmentChart />
-
+ */}
 
 
       </div>

@@ -11,6 +11,8 @@ import {
   Filler,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import SegmentChart from "./SegmentChart";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -58,5 +60,9 @@ export default function BarChart() {
     };
   }, []);
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <Bar data={data} options={options} />
+    </div>
+  );
 }
