@@ -17,11 +17,19 @@ import Chatbox from './Chatbox2';
 import BarChart from './BarChart';
 import LineChart from './LineChart';
 import SegmentChart from './SegmentChart';
-import DoughnutChart from './DoughnutChart';
-import Scatterplot from './Scatterplot';
+import ScatterplotComponent from './ScatterplotComponent';
 import XgBoostPredict from './XgBoostPredict';
 import HeatMap from './HeatMap';
 import ConfusionMatrix from './ConfusionMatrix';
+import DataFrameTable from './TheDataset';
+import BarAndDoughnut from './BarAndDoughnut';
+import UpdatedDataset from './UpdatedDataset';
+import HeatMapComponent from './HeatMapComponent';
+import ModelTraining from './ModelTraining';
+import ResultsData from './ResultsData';
+import Summary from './Summary';
+import LimitationsFuture from './LimitationsFuture';
+import Introduction from './Introduction';
 
 
 function App() {
@@ -33,7 +41,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='mb-40'>
       
       <Navbar />
 
@@ -43,77 +51,105 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      {/* <Greeting name= { hisName }/>
-      {response && <div>{response}</div>} */}
-     <div className='align-center w-[100vw] items-center justify-center content-center'>
-
-         
-     <XgBoostPredict />
+     <div className='align-center w-[100%] items-center justify-center content-center'>
 
 
       <div className='w-[100%] px-10 justify-center space-y-20 mx-auto align-middle items-center'>
        
 
-{/* 
-      <div className='mt-20 grid grid-cols-3 gap-10 justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
-        <div className='col-span-2'>
-          <BarChart/>
-        </div>
-        <div className='col-span-1'>
-          <DoughnutChart />
-        </div>
-      </div> */}
-
-    <div className={isMediumScreen ? "grid grid-cols-3 gap-10 mt-20 justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2" : "flex flex-col gap-20 mt-20 justify-center align-middle content-center items-center  border-black border-2"}>
-          <div className={isMediumScreen ? 'col-span-2' : 'w-[100%]'}>
-            <BarChart />
-          </div>
-          <div className={isMediumScreen ? 'col-span-1' : 'w-[75%]'}>
-            <DoughnutChart />
-          </div>
-        </div>
+      <XgBoostPredict />
 
 
+      <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
 
-      <div className='flex justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
+      <Introduction />
 
-        <Scatterplot />
-      
       </div>
 
 
-      <div className='flex  justify-center align-middle content-center items-center h-[60vh] text-3xl border-black border-2'>
 
-        <HeatMap />
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+
+            <DataFrameTable />
 
         </div>
 
 
-        <div className='flex  justify-center align-middle content-center items-center h-[100%] py-20 text-3xl border-black border-2'>
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+                
+          <BarAndDoughnut />
+
+        </div>
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+                
+                <UpdatedDataset />
+      
+        </div>
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+                
+              <HeatMapComponent />
+      
+        </div>
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+
+            <ScatterplotComponent />
+
+        </div>
+
+
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+                
+                <ModelTraining />
+      
+        </div>
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+                
+                <ResultsData />
+      
+        </div>
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
 
         <ConfusionMatrix />
 
         </div>
 
 
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+
+        <Summary />
+
+        </div>
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+
+        <LimitationsFuture />
+
+        </div>
+
+
+
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-lg border-black border-2'>
+
         <Chatbox />
-        {/* <LineChart />
-        <SegmentChart />
- */}
-
+        </div>
 
       </div>
 
 
       </div>
-{/* 
-      <ProductList />
 
-      <MappingData />
-
-      <NewForm />
-
-      <Boxes /> */}
 
     </div>
     

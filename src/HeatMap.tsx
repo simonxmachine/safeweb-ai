@@ -37,7 +37,11 @@ const tf_model_testing = {
 export default function HeatMap() {
   return (
     <div className="flex justify-center items-center">
-      <img src={heat_map} alt="Malicious URL Heatmap" className="w-[75%]" />
+      <img
+        src={heat_map}
+        alt="Malicious URL Heatmap"
+        className={`${window.innerWidth < 600 ? "w-[100%]" : "w-[80%]"} `}
+      />
     </div>
   );
 }

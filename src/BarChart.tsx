@@ -60,9 +60,5 @@ export default function BarChart() {
     };
   }, []);
 
-  return (
-    <div className="flex flex-col justify-center items-center">
-      <Bar data={data} options={options} />
-    </div>
-  );
+  return <Bar data={data} options={options} className="w-[100%]" />;
 }

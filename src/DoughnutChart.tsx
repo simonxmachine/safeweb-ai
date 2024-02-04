@@ -37,14 +37,12 @@ export default function DoughnutChart() {
   const options = {};
 
   return (
-    <>
-      <Doughnut
-        data={data}
-        options={{
-          responsive: true,
-          maintainAspectRatio: true,
-        }}
-      ></Doughnut>
-    </>
+    <Doughnut
+      data={data}
+      options={{
+        responsive: true,
+        maintainAspectRatio: true,
+      }}
+    ></Doughnut>
   );
 }

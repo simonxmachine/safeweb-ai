@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   margin-top: 10em;
   padding: 0;
@@ -189,4 +193,9 @@ input[type="radio"]:checked + label:after {
   height: 10px;
   background-color: #000000;
   border-radius: 50%;
+}
+
+p {
+  font-size: 18px;
+  line-height: 22px;
 }

@@ -2,11 +2,11 @@ import React from "react";
 import confusionMatrix from "./assets/xgboost5_confusion_matrix.png"; // Import your logo image
 import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Import your logo image
 
-export default function ConfusionMatrix() {
+export default function LimitationsFuture() {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px]">
-        <h2>For better visualization...</h2>
+        <h2>Limitations & Future Directions</h2>
         <br />
         <p>
           We can see that the two models have high accuracy making predictions

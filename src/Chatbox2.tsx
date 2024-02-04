@@ -77,7 +77,13 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[60vh] border-black border-2">
+    <div className="flex flex-col w-[1050px] justify-center items-center h-[100%]">
+      <h2 className="text-3xl mb-10">Have further questions?</h2>
+
+      <p className="mb-10">
+        Talk to our custom AI chatbot! Our company data and frequently asked
+        questions was embedded into the OpenAI API so we can serve you better!
+      </p>
       <div
         className="chat-history"
         ref={chatHistoryRef}
@@ -120,14 +126,13 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           </div>
         ))}
       </div>
-
       <div className="flex flex-row mt-5 gap-5 w-[80%] justify-center items-center">
         <input
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="w-[100%] pl-2"
+          className="w-[100%] pl-2 text-lg"
           placeholder="Enter your message"
         />
         <button onClick={handleSendMessage}>Send</button>
