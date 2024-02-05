@@ -6,7 +6,7 @@ const ResultsData = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="italic">And the results...</h2>
+        <h2 className="italic h2-bold">And the results...</h2>
         <br />
         <p>
           XG-Boost appears to have better evaluation metrics almost all across

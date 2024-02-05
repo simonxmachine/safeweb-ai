@@ -6,7 +6,7 @@ export default function Summary() {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2>Summary & Key Findings</h2>
+        <h2 className="h2-bold">Summary & Key Findings</h2>
         <br />
         <p>
           We can see that the two models have high accuracy making predictions

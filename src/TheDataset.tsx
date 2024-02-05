@@ -22,7 +22,7 @@ const DataframeTable = () => {
         <img
           src={dataset}
           alt="XG Boost Confusion Matrix"
-          className="w-[100%] max-w-[500px]"
+          className="w-[90%] max-w-[500px]"
         />
       </div>
     </div>

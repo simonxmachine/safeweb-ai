@@ -6,7 +6,7 @@ export default function LimitationsFuture() {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2>Limitations & Future Directions</h2>
+        <h2 className="h2-bold">Limitations & Future Directions</h2>
         <br />
         <p>
           We can see that the two models have high accuracy making predictions

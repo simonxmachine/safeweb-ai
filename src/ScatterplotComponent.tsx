@@ -1,13 +1,15 @@
 import React from "react";
-import dataset from "./assets/full_dataset.png"; // Import your logo image
-import updatedDataset from "./assets/updated_dataset.png"; // Import your logo image
+import dataset from "./assets/full_dataset.png";
+import updatedDataset from "./assets/updated_dataset.png";
 import Scatterplot from "./Scatterplot";
 
 const ScatterplotComponent = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px] mobile-text px-[30px]">
-        <h2>Correlation between letter count and special characters...</h2>
+      <div className="mb-10 max-w-[1050px] mobile-text">
+        <h2 className="h2-bold">
+          Correlation between letter count and special characters...
+        </h2>
         <br />
         <p>
           We added distinguishing features such as url length, number of digits,

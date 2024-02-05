@@ -5,7 +5,9 @@ const DataframeTable = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[700px] mobile-text">
-        <h2>Now let's train the models and get some predictions...</h2>
+        <h2 className="h2-bold">
+          Now let's train the models and get some predictions...
+        </h2>
         <br />
         <p>
           We decided to use XG-Boost and a multi-layer neural network as our
