@@ -5,7 +5,7 @@ import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Imp
 export default function Technology() {
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-10 max-w-[1050px]">
+      <div className="mb-10 max-w-[1050px] mobile-text">
         <h2>Technologies Used</h2>
         <br />
         <p className="w-[100%]">
