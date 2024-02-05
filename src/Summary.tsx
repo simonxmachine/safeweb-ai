@@ -21,7 +21,7 @@ export default function Summary() {
             window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
           } justify-center items-center`}
         >
-          <img
+          {/* <img
             src={confusionMatrix}
             alt="XG Boost Confusion Matrix"
             className={`${
@@ -35,13 +35,9 @@ export default function Summary() {
             className={`${
               window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
             } `}
-          />
+          /> */}
         </div>
       </div>
-
-      <p className="mt-6  mb-2 text-xs">
-        [Legend: 0-Benign; 1-Defacement; 2-Phishing; 3-Malware]
-      </p>
     </div>
   );
 }

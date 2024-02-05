@@ -36,9 +36,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [response, setResponse] = useState("This is standard response")
 
-  const hisName = "leeeeee"
   const isMediumScreen = window.innerWidth >= 600;
-
 
   return (
     <div className='mb-40'>
@@ -60,44 +58,42 @@ function App() {
       <XgBoostPredict />
 
 
-      <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+      <div className='homeContainers'>
 
       <Introduction />
 
       </div>
 
 
-
-
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
 
             <DataFrameTable />
 
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
                 
           <BarAndDoughnut />
 
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
                 
                 <UpdatedDataset />
       
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
                 
               <HeatMapComponent />
       
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
 
             <ScatterplotComponent />
 
@@ -106,33 +102,33 @@ function App() {
 
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
                 
                 <ModelTraining />
       
         </div>
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
                 
                 <ResultsData />
       
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
 
         <ConfusionMatrix />
 
         </div>
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
 
         <Summary />
 
         </div>
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-3xl border-black border-2'>
+        <div className='homeContainers'>
 
         <LimitationsFuture />
 
@@ -140,7 +136,7 @@ function App() {
 
 
 
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-lg border-black border-2'>
+        <div className='flex justify-center align-middle content-center items-center h-[100%] text-lg py-[30px] border-black border-2'>
 
         <Chatbox />
         </div>

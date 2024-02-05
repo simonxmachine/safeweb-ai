@@ -9,9 +9,9 @@ export default function Introduction() {
         <h2>Why did we build this...?</h2>
         <br />
         <p>
-          We can see that the two models have high accuracy making predictions
-          on test data, but there is room for further improvement, because even
-          1% error can be disastrous for a company/individual.
+          Malicious URLs are a serious threat to cybersecurity; they host
+          unsolicited content and lure unsuspecting users to become victims of
+          scams, and cause losses of billions of dollars every year.
         </p>
       </div>
 
@@ -21,7 +21,7 @@ export default function Introduction() {
             window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
           } justify-center items-center`}
         >
-          <img
+          {/* <img
             src={confusionMatrix}
             alt="XG Boost Confusion Matrix"
             className={`${
@@ -35,13 +35,9 @@ export default function Introduction() {
             className={`${
               window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
             } `}
-          />
+          /> */}
         </div>
       </div>
-
-      <p className="mt-6  mb-2 text-xs">
-        [Legend: 0-Benign; 1-Defacement; 2-Phishing; 3-Malware]
-      </p>
     </div>
   );
 }

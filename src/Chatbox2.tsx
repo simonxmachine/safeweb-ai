@@ -78,7 +78,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
 
   return (
     <div className="flex flex-col w-[1050px] justify-center items-center h-[100%]">
-      <h2 className="text-3xl mb-10">Have further questions?</h2>
+      <h2 className="text-3xl mb-10">Have additional questions?</h2>
 
       <p className="mb-10">
         Talk to our custom AI chatbot! Our company data and frequently asked

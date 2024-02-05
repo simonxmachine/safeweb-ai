@@ -7,7 +7,7 @@ const ScatterplotComponent = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px]">
-        <h2>This is the dataset after we added features...</h2>
+        <h2>Correlation between letter count and special characters...</h2>
         <br />
         <p>
           We added distinguishing features such as url length, number of digits,

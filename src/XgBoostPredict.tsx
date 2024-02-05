@@ -3,30 +3,71 @@ import React, { useState, useEffect, useRef } from "react";
 const XgBoostPredict = () => {
   const [inputMessage, setInputMessage] = useState(""); // Move the useState hook here
 
+  const [returnData, setReturnData] = useState("");
+
+  const sampleJson = {
+    "XG - Benign": {
+      Benign: 0.921999990940094,
+      Defacement: 0.07400000095367432,
+      Phishing: 0,
+      Malware: 0.004000000189989805,
+    },
+    "TF - Defacement": {
+      Benign: 0.15299999713897705,
+      Defacement: 0.8460000157356262,
+      Phishing: 0,
+      Malware: 0,
+    },
+  };
+
+  const formattedData = (
+    <table>
+      <tbody>
+        {Object.entries(returnData).map(([label, values]) => (
+          <>
+            <td>
+              <tr key={label}>
+                <th className="text-lg text-left font-semibold px-5 py-2 mt-3">
+                  {label === "XG - Benign" ? (
+                    <th className="text-green-600">{label}</th>
+                  ) : (
+                    <th className="text-red-600">{label}</th>
+                  )}
+                </th>
+              </tr>
+              <tr>
+                {Object.entries(values).map(([category, score]) => (
+                  <tr key={category}>
+                    <td>
+                      <p className="text-left px-5">
+                        {category}: {parseFloat(score).toFixed(2)}
+                      </p>
+                    </td>
+                  </tr>
+                ))}
+              </tr>
+            </td>
+          </>
+        ))}
+      </tbody>
+    </table>
+  );
+
   const handleSendMessage = async () => {
     try {
       const response = await fetch(
-        // `https://b1fqrfoxwg.execute-api.us-east-1.amazonaws.com/xg_predict`,
         `https://ssqkmxwwhl.execute-api.us-east-1.amazonaws.com/xg_predict`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // Origin: "https://example.com",
-            // Host: "https://example.com",
-            // "User-Agent": "https://example.com",
-            // Accept: "*/*",
-            // "Accept-Encoding": "gzip, deflate, br",
-            // Connection: "keep-alive", // Add the "Origin" header here
           },
           body: JSON.stringify({ message: inputMessage }),
         }
       );
-
-      console.log();
       const data = await response.json();
 
-      console.log(data);
+      setReturnData(data);
     } catch (error) {
       console.error("Error sending message:", error);
     }
@@ -39,9 +80,9 @@ const XgBoostPredict = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[60vh] text-3xl border-black border-2">
-      See if Your URL is Malicious!
-      <div className="flex flex-row mt-5 gap-5 w-[80%] justify-center items-center text-base">
+    <div className="flex flex-col justify-center items-center h-[100%] min-h-[50vh] text-3xl border-black border-2">
+      Check Your URL for Malware!
+      <div className="flex flex-row mt-5 mb-5 gap-5 w-[80%] justify-center items-center text-base">
         <input
           type="text"
           value={inputMessage} // Use the inputMessage state here
@@ -52,6 +93,7 @@ const XgBoostPredict = () => {
         />
         <button onClick={handleSendMessage}>Send</button>
       </div>
+      <div className="text-sm">{formattedData}</div>
     </div>
   );
 };
