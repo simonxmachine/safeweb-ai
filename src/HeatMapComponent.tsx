@@ -9,7 +9,9 @@ const HeatMapComponent = () => {
       } gap-10 justify-center items-center`}
     >
       <div className="w-[100%] text-left max-w-[600px]">
-        <h2>This is a heatmap of the data with added features... </h2>
+        <h2 className="h2-bold">
+          This is a heatmap of the data with added features...{" "}
+        </h2>
         <br />
         <p>
           This heatmap helps us identify and visualize correlations between the

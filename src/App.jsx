@@ -54,7 +54,7 @@ function App() {
      <div className='align-center w-[100%] items-center justify-center content-center'>
 
 
-      <div className='w-[100%] px-10 justify-center space-y-20 mx-auto align-middle items-center'>
+      <div className='w-[100%] px-0 justify-center space-y-20 mx-auto align-middle items-center'>
        
 
       <XgBoostPredict />

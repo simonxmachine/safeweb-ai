@@ -208,11 +208,15 @@ p {
   align-items: center;
   height: 100%;
   font-size: 2rem;
-  border: 2px solid #000000;
-  padding: 40px 30px;
+  border: 0px solid #000000;
+  padding: 30px 30px;
 }
 h2 {
   line-height: 40px;
+}
+
+.h2-bold {
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {

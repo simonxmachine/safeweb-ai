@@ -6,7 +6,7 @@ export default function Introduction() {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2>Why did we build this...?</h2>
+        <h2 className="h2-bold">Why did we build this...?</h2>
         <br />
         <p>
           Malicious URLs are a serious threat to cybersecurity; they host
