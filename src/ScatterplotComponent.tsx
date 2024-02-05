@@ -6,7 +6,7 @@ import Scatterplot from "./Scatterplot";
 const ScatterplotComponent = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px]">
+      <div className="mb-10 max-w-[1050px] mobile-text">
         <h2>Correlation between letter count and special characters...</h2>
         <br />
         <p>

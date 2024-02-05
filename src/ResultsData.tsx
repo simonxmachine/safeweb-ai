@@ -5,7 +5,7 @@ import xgResults from "./assets/xg_results.png";
 const ResultsData = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px]">
+      <div className="mb-10 max-w-[1050px] mobile-text">
         <h2 className="italic">And the results...</h2>
         <br />
         <p>

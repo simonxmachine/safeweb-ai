@@ -5,7 +5,7 @@ import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png";
 export default function ConfusionMatrix() {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px]">
+      <div className="mb-10 max-w-[1050px] mobile-text">
         <h2>For better visualization...</h2>
         <br />
         <p>
