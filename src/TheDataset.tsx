@@ -1,6 +1,5 @@
 import React from "react";
-import dataset from "./assets/full_dataset.png"; // Import your logo image
-import updatedDataset from "./assets/updated_dataset.png"; // Import your logo image
+import dataset from "./assets/full_dataset.png";
 
 const DataframeTable = () => {
   return (
@@ -18,17 +17,13 @@ const DataframeTable = () => {
         </p>
         <br />
         <br />
-        <p style={{ fontSize: "14px" }}>
-          *Dataset was obtained from Kaggle.
-          (https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset)
-        </p>
       </div>
 
       <div className="w-[100%] align-center justify-center items-center content-center flex">
         <img
           src={dataset}
           alt="XG Boost Confusion Matrix"
-          className="w-[100%] max-w-[400px]"
+          className="w-[100%] max-w-[500px]"
         />
       </div>
     </div>
