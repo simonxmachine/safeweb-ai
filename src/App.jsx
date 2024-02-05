@@ -112,7 +112,7 @@ function App() {
 
         <div className='homeContainers'>
                 
-                <ResultsData />
+          <ResultsData />
       
         </div>
 

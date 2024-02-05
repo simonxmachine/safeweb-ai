@@ -6,7 +6,7 @@ const BarAndDoughnut = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px]">
-        <h2>This is the breakdown of the data...</h2>
+        <h2>Visual breakdown of the data...</h2>
         <br />
         <p>
           Notice how there are many more data points labeled the 'Benign' class
@@ -16,20 +16,29 @@ const BarAndDoughnut = () => {
       </div>
 
       <div>
-        <div
+        {/* <div
           className={`flex ${
             window.innerWidth < 1000 ? "flex-col" : "flex-row"
           } gap-12 justify-center items-center`}
+        > */}
+        <div
+          className={`flex ${
+            window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
+          } justify-center items-center`}
         >
           <div
             className={`${
-              window.innerWidth < 1000 ? " w-[80vw]" : " w-[40vw]"
+              window.innerWidth < 700 ? "w-[100%]" : "w-[60%] max-w-[500px]"
             }`}
           >
             <BarChart />
           </div>
 
-          <div className="w-[100%] max-w-[260px] align-center justify-center items-center content-center">
+          <div
+            className={`${
+              window.innerWidth < 700 ? "w-[80%]" : "w-[40%] max-w-[300px]"
+            }`}
+          >
             <DoughnutChart />
           </div>
         </div>
