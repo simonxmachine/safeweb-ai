@@ -224,3 +224,13 @@ h2 {
     text-align: left;
   }
 }
+
+.tech-logo {
+  max-width: 80px;
+}
+
+@media (max-width: 500px) {
+  .tech-logo {
+    max-width: 60px;
+  }
+}

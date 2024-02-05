@@ -78,7 +78,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
 
   return (
     <div className="flex flex-col w-[1050px] justify-center items-center h-[100%]">
-      <h2 className="text-3xl mb-10 mobile-text px-[30px]">
+      <h2 className="text-3xl mb-10 mobile-text h2-bold px-[30px]">
         Have additional questions?
       </h2>
 

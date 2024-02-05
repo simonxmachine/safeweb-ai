@@ -33,7 +33,7 @@ const ResultsData = () => {
             <img
               src={xgResults}
               alt="XG Boost Confusion Matrix"
-              className="w-[100%] max-w-[400px]"
+              className="w-[90%] max-w-[400px]"
             />
           </div>
         </div>
@@ -50,7 +50,7 @@ const ResultsData = () => {
             <img
               src={tfResults}
               alt="Tensorflow Confusion Matrix"
-              className="w-[100%] max-w-[400px]"
+              className="w-[90%] max-w-[400px]"
             />
           </div>
         </div>

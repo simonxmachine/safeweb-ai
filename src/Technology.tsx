@@ -17,18 +17,18 @@ export default function Technology() {
 
       <div>
         <div
-          className={`text-lg 
+          className={` 
           ${
             window.innerWidth < 500
-              ? "flex-col flex gap-6"
-              : "grid grid-cols-2 justify-left border-0 border-black gap-10 m-[auto] items-center "
+              ? "text-sm grid grid-cols-2 justify-left border-0 border-black gap-4 m-[auto] items-center"
+              : "text-lg grid grid-cols-2 justify-left border-0 border-black gap-10 m-[auto] items-center "
           }`}
         >
           <div className="justify-left items-center gap-3 flex flex-row">
             <img
               src={confusionMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Python</div>
           </div>
@@ -37,7 +37,7 @@ export default function Technology() {
             <img
               src={confusionMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Google Colab</div>
           </div>
@@ -46,7 +46,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>SciKit-Learn</div>
           </div>
@@ -55,7 +55,7 @@ export default function Technology() {
             <img
               src={confusionMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Tensorflow</div>
           </div>
@@ -64,7 +64,7 @@ export default function Technology() {
             <img
               src={confusionMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Pandas</div>
           </div>
@@ -73,7 +73,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>OpenAI</div>
           </div>
@@ -82,7 +82,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Javscript</div>
           </div>
@@ -91,7 +91,7 @@ export default function Technology() {
             <img
               src={confusionMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>React</div>
           </div>
@@ -100,7 +100,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Tailwind CSS</div>
           </div>
@@ -109,7 +109,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Docker</div>
           </div>
@@ -118,7 +118,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Nginx</div>
           </div>
@@ -127,16 +127,16 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
-            <div>AWS ECS/Fargate</div>
+            <div className="text-left">AWS EC2, ECS,Fargate</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Vercel</div>
           </div>
@@ -145,7 +145,7 @@ export default function Technology() {
             <img
               src={tensorflowMatrix}
               alt="XG Boost Confusion Matrix"
-              className={`max-w-[80px]`}
+              className="tech-logo"
             />
             <div>Github</div>
           </div>
