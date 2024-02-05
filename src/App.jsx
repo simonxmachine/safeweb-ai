@@ -30,6 +30,8 @@ import ResultsData from './ResultsData';
 import Summary from './Summary';
 import LimitationsFuture from './LimitationsFuture';
 import Introduction from './Introduction';
+import Technology from './Technology';
+import Footer from './Footer';
 
 
 function App() {
@@ -39,7 +41,7 @@ function App() {
   const isMediumScreen = window.innerWidth >= 600;
 
   return (
-    <div className='mb-40'>
+    <div className=''>
       
       <Navbar />
 
@@ -141,14 +143,29 @@ function App() {
         <Chatbox />
         </div>
 
+
+
+
+        <div className='homeContainers'>
+
+      <Technology />
+
       </div>
 
 
       </div>
 
+
+      </div>
+
+
+<div className='bg-[#e8e8e8] align-middle content-center items-center justify-center mt-20 min-h-[100px]' style={{ display: 'flex', alignItems: 'center' }}>
+  <Footer/>
+</div>
 
     </div>
-    
+
+
   )
 }
 
