@@ -5,7 +5,7 @@ import DoughnutChart from "./DoughnutChart";
 const BarAndDoughnut = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px] mobile-text">
+      <div className="mb-10 max-w-[1050px] mobile-text px-[10px]">
         <h2>Visual breakdown of the data...</h2>
         <br />
         <p>
@@ -36,7 +36,7 @@ const BarAndDoughnut = () => {
 
           <div
             className={`${
-              window.innerWidth < 700 ? "w-[90%]" : "w-[40%] max-w-[300px]"
+              window.innerWidth < 700 ? "w-[70%]" : "w-[40%] max-w-[300px]"
             }`}
           >
             <DoughnutChart />
