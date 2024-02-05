@@ -94,6 +94,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           borderStyle: "solid",
           borderWidth: "1px",
           borderColor: "black",
+          backgroundColor: "white",
           width: "80%",
           minHeight: "300px",
           maxHeight: "300px",

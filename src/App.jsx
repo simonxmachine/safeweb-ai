@@ -67,6 +67,8 @@ function App() {
       </div>
 
 
+      <hr className='horizontalBar' />
+
         <div className='homeContainers'>
 
             <DataFrameTable />
@@ -74,11 +76,16 @@ function App() {
         </div>
 
 
+        <hr className='horizontalBar' />
+
         <div className='homeContainers'>
                 
           <BarAndDoughnut />
 
         </div>
+
+
+      <hr className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -88,11 +95,17 @@ function App() {
         </div>
 
 
+
+        <hr className='horizontalBar' />
+
         <div className='homeContainers'>
                 
               <HeatMapComponent />
       
         </div>
+
+
+      <hr className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -102,6 +115,7 @@ function App() {
         </div>
 
 
+        <hr className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -110,11 +124,19 @@ function App() {
       
         </div>
 
+
+        <hr className='horizontalBar' />
+
+
         <div className='homeContainers'>
                 
           <ResultsData />
       
         </div>
+
+
+
+        <hr className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -123,12 +145,17 @@ function App() {
 
         </div>
 
+        <hr className='horizontalBar' />
+
 
         <div className='homeContainers'>
 
         <Summary />
 
         </div>
+
+
+        <hr className='horizontalBar' />
 
         <div className='homeContainers'>
 
@@ -137,14 +164,7 @@ function App() {
         </div>
 
 
-
-        <div className='flex justify-center align-middle content-center items-center h-[100%] text-lg py-[30px] border-black border-2'>
-
-        <Chatbox />
-        </div>
-
-
-
+        <hr className='horizontalBar' />
 
         <div className='homeContainers'>
 
@@ -153,13 +173,20 @@ function App() {
       </div>
 
 
-      </div>
+
+
+        <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[60px] pb-[80px]'>
+
+        <Chatbox />
+        </div>
 
 
       </div>
 
+      </div>
 
-<div className='bg-[#e8e8e8] align-middle content-center items-center justify-center mt-20 min-h-[100px]' style={{ display: 'flex', alignItems: 'center' }}>
+
+<div className='bg-[#113768] text-white font-semibold align-middle content-center items-center justify-center min-h-[100px]' style={{ display: 'flex', alignItems: 'center' }}>
   <Footer/>
 </div>
 

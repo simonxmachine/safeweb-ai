@@ -9,7 +9,7 @@ body {
 #root {
   width: 100%;
   margin: 0 auto;
-  margin-top: 10em;
+  margin-top: 6em;
   padding: 0;
   text-align: center;
 }
@@ -209,7 +209,7 @@ p {
   height: 100%;
   font-size: 2rem;
   border: 0px solid #000000;
-  padding: 30px 30px;
+  padding: 20px 30px;
 }
 h2 {
   line-height: 40px;
@@ -233,4 +233,13 @@ h2 {
   .tech-logo {
     max-width: 60px;
   }
+}
+
+.horizontalBar {
+  width: 75%;
+  margin: 0 auto;
+  height: 1px;
+  border: 0px;
+  background: lightgrey;
+  /* background: linear-gradient(to right, #0598ce, #113768); */
 }

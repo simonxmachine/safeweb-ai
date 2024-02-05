@@ -6,7 +6,7 @@ export default function Technology() {
   return (
     <div className="flex flex-col items-center">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="h2-bold">Technologies Used</h2>
+        <h2 className="h2-bold">References & Technologies Used</h2>
         <br />
         <p className="w-[100%]">
           We can see that the two models have high accuracy making predictions
@@ -39,7 +39,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Google Colab</div>
+            <div className="text-left">Google Colab</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">

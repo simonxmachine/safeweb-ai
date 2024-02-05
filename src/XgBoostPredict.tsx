@@ -80,8 +80,8 @@ const XgBoostPredict = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[100%] min-h-[50vh] text-3xl border-black border-2">
-      Check Your URL for Malware!
+    <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[50vh] text-3xl border-black border-2">
+      Scan Your URL for Malware!
       <div className="flex flex-row mt-5 mb-5 gap-5 w-[80%] justify-center items-center text-base">
         <input
           type="text"
