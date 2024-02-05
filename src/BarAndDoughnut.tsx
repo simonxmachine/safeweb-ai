@@ -28,7 +28,7 @@ const BarAndDoughnut = () => {
         >
           <div
             className={`${
-              window.innerWidth < 700 ? "w-[90%]" : "w-[60%] max-w-[500px]"
+              window.innerWidth < 700 ? "w-[96%]" : "w-[60%] max-w-[500px]"
             }`}
           >
             <BarChart />
@@ -36,7 +36,7 @@ const BarAndDoughnut = () => {
 
           <div
             className={`${
-              window.innerWidth < 700 ? "w-[80%]" : "w-[40%] max-w-[300px]"
+              window.innerWidth < 700 ? "w-[86%]" : "w-[40%] max-w-[300px]"
             }`}
           >
             <DoughnutChart />

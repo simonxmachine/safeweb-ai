@@ -5,7 +5,7 @@ import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Imp
 export default function Summary() {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px]">
+      <div className="mb-10 max-w-[1050px] mobile-text">
         <h2>Summary & Key Findings</h2>
         <br />
         <p>
