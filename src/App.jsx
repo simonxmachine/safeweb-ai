@@ -175,7 +175,7 @@ function App() {
 
 
 
-        <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[60px] pb-[80px]'>
+        <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[80px] pb-[80px]'>
 
         <Chatbox />
         </div>
