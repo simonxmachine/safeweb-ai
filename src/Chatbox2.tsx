@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Send } from "lucide-react";
 
 interface Message {
   type: "user" | "api";
@@ -95,7 +96,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           borderWidth: "1px",
           borderColor: "black",
           backgroundColor: "white",
-          width: "80%",
+          width: "86%",
           minHeight: "300px",
           maxHeight: "300px",
           padding: "20px",
@@ -129,16 +130,19 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row mt-5 gap-5 w-[80%] justify-center items-center">
+      <div className="flex flex-row mt-5 gap-3 h-[40px] w-[86%] justify-center items-center">
         <input
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="w-[100%] pl-2 text-lg"
+          className="w-[100%] h-[100%] pl-2 text-lg rounded"
           placeholder="Enter your message"
         />
-        <button onClick={handleSendMessage}>Send</button>
+        <button onClick={handleSendMessage} className="chatButton">
+          {" "}
+          <Send size={20} />
+        </button>
       </div>
     </div>
   );

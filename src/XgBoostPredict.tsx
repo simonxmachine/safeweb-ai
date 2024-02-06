@@ -89,7 +89,7 @@ const XgBoostPredict = () => {
           value={inputMessage} // Use the inputMessage state here
           onChange={(e) => setInputMessage(e.target.value)} // Update the inputMessage state here
           onKeyDown={handleKeyPress}
-          className="w-[100%] h-[100%] pl-2"
+          className="w-[100%] h-[100%] pl-2 rounded"
           placeholder="Enter URL Here"
         />
         <button className="predictButton" onClick={handleSendMessage}>
