@@ -57,7 +57,8 @@ const XgBoostPredict = () => {
   const handleSendMessage = async () => {
     try {
       const response = await fetch(
-        `https://ssqkmxwwhl.execute-api.us-east-1.amazonaws.com/xg_predict`,
+        // `https://ssqkmxwwhl.execute-api.us-east-1.amazonaws.com/xg_predict`,
+        `https://1cn06qy3x7.execute-api.us-east-1.amazonaws.com/xg_predict`,
         {
           method: "POST",
           headers: {

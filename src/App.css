@@ -261,7 +261,7 @@ h2 {
 
 .chatButton {
   color: black;
-  border: 2;
+  border: 0;
 
   background-color: #00e500;
   height: 100%;

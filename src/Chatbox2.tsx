@@ -141,7 +141,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
         />
         <button onClick={handleSendMessage} className="chatButton">
           {" "}
-          <Send size={20} />
+          <Send size={16} />
         </button>
       </div>
     </div>
