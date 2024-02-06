@@ -30,7 +30,7 @@ const XgBoostPredict = () => {
               <tr key={label}>
                 <th className="text-lg text-left font-semibold px-5 py-2 mt-3">
                   {label === "XG - Benign" ? (
-                    <th className="text-green-600">{label}</th>
+                    <th className="text-green-500">{label}</th>
                   ) : (
                     <th className="text-red-600">{label}</th>
                   )}

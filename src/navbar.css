@@ -1,0 +1,141 @@
+
+/* 
+nav {
+ 
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #001a33;
+  color: white;
+  display: flex;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 2rem;
+  padding: 0 1rem;
+  width: 100%; 
+} */
+
+/* .nav-links li {
+  transition: 0.3s ease-in;
+  list-style: none;
+  cursor: pointer;
+  border: 0px solid #000000;
+  color: white;
+  padding: 10px;
+  height: 40px;
+}
+
+.nav-links li.active {
+  color: #00e500;
+}
+
+.nav-links li:hover {
+  color: #0e89fc;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+nav a:hover {
+  color: #0e89fc;
+} */
+
+
+nav {
+  width: 100%;
+  height: 5em;
+  background-color:#001a33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  left:0;
+  top:0;
+  position: fixed;
+}
+
+.burger-menu {
+  height: 70%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger-bar {
+  width: 3em;
+  height: 0.3em;
+  background-color: white;
+  border-radius: 0.5em;
+  z-index: 20;
+}
+
+.menu {
+    color: white;
+    text-align: right;
+    font-size: x-large;
+    padding: 30px;
+    width: 50%;
+    height: 80vh;
+    background-color: #001a33;
+    right: -100%;
+    position: fixed;
+    transition: right 1s ease-in-out, transform 1s ease-in-out;
+    z-index: 2;
+}
+
+/* ------------- sliding menu ------------------ */
+/* .hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: right .5s ease-in-out, opacity .5s ease-in-out; 
+    right: -100%;
+} */
+
+.visible {
+    right: 0;
+    opacity: .8;
+    transform: none;
+}
+
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.30em, 1em);
+  transition: ease-out 0.2s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.0);
+  transition: ease-out 0.3s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.3em, 1em);
+  transition: ease-out 0.2s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
