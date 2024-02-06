@@ -243,3 +243,15 @@ h2 {
   background: lightgrey;
   /* background: linear-gradient(to right, #0598ce, #113768); */
 }
+
+.predictButton {
+  color: black;
+  border: 0;
+  background-color: #00e500;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.predictButton:hover {
+  background-color: #00ff00;
+}

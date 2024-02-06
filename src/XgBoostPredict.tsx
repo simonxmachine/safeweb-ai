@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { ScanSearch } from "lucide-react";
 
 const XgBoostPredict = () => {
   const [inputMessage, setInputMessage] = useState(""); // Move the useState hook here
@@ -80,18 +81,20 @@ const XgBoostPredict = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[50vh] text-3xl border-black border-2">
-      Scan Your URL for Malware!
-      <div className="flex flex-row mt-5 mb-5 gap-5 w-[80%] justify-center items-center text-base">
+    <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[50vh] text-3xl">
+      Scan URL for Malware
+      <div className="flex flex-row mt-5 mb-5 gap-3 w-[90%] h-[40px] justify-center items-center text-black text-lg">
         <input
           type="text"
           value={inputMessage} // Use the inputMessage state here
           onChange={(e) => setInputMessage(e.target.value)} // Update the inputMessage state here
           onKeyDown={handleKeyPress}
-          className="w-[100%] pl-2"
-          placeholder="Type a URL to test"
+          className="w-[100%] h-[100%] pl-2"
+          placeholder="Enter URL Here"
         />
-        <button onClick={handleSendMessage}>Send</button>
+        <button className="predictButton" onClick={handleSendMessage}>
+          <ScanSearch size={24} />
+        </button>
       </div>
       <div className="text-sm">{formattedData}</div>
     </div>
