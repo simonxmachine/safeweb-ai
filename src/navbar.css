@@ -54,6 +54,36 @@ nav a:hover {
   color: #0e89fc;
 } */
 
+.mobileMenuUl a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.mobileMenuUl {
+  color: white;
+}
+
+.mobileMenuUl a:hover {
+  color: #00ff00;
+}
+
+.mobileMenuUl li {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.mobileMenuUl li.active {
+  color: #00e500;
+}
+
+.mobileMenuUl li:hover {
+  color: #00ff00;
+}
+
 .desktopMenuUl {
   color: white;
   padding: 0;
@@ -73,41 +103,11 @@ nav a:hover {
   height: 40px;
 }
 
-.mobileMenuUl a {
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
-  transition: 0.3s ease;
-}
-
-.mobileMenuUl a:hover {
-  color: #00ff00;
-}
-
 .desktopMenuUl li.active {
   color: #00e500;
 }
 
 .desktopMenuUl li:hover {
-  color: #00ff00;
-}
-
-.mobileMenuUl {
-  color: white;
-}
-
-.mobileMenuUl li {
-  transition: 0.3s ease-in;
-  cursor: pointer;
-  color: white;
-  padding-bottom: 10px;
-}
-
-.mobileMenuUl li.active {
-  color: #00e500;
-}
-
-.mobileMenuUl li:hover {
   color: #00ff00;
 }
 
@@ -176,7 +176,7 @@ nav a:hover {
 .menu {
   color: white;
   text-align: right;
-  font-size: x-large;
+  font-size: large;
   padding: 30px;
   width: 50%;
   height: 100vh;
