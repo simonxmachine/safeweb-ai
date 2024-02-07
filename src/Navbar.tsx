@@ -3,20 +3,23 @@ import logo from "./assets/react.svg"; // Import your logo image
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import NewNavBar from "./NewNavBar";
 
 function Navbar() {
   return (
     <>
-      <nav>
+      {/* <div>
         <Link to="/" className="site-title">
           <img src={logo} alt="Logo" className="logo" />
         </Link>
-        <ul className="nav-links">
+      </div> */}
+
+      <NewNavBar />
+      {/* <ul className="nav-links">
           <CustomLink to="/">Home</CustomLink>
           <CustomLink to="/about">About</CustomLink>
           <CustomLink to="/contact">Contact</CustomLink>
-        </ul>
-      </nav>
+        </ul> */}
     </>
   );
 }
