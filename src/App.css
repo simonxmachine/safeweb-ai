@@ -264,8 +264,7 @@ h2 {
 
 .chatButton {
   color: black;
-  border: 0;
-
+  border: 1px solid transparent;
   background-color: #00e500;
   height: 100%;
   transition: 0.3s ease;
@@ -275,4 +274,5 @@ h2 {
 
 .chatButton:hover {
   background-color: #00ff00;
+  border: 1px solid black;
 }

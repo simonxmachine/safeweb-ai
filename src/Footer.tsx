@@ -1,7 +1,12 @@
 import * as React from "react";
 
 function Footer() {
-  return <>© 2024 SafeWeb.ai</>;
+  return (
+    <>
+      <span style={{ color: "yellow" }}>©</span>&nbsp;2024 SafeWeb
+      <span style={{ color: "yellow" }}>.</span>ai
+    </>
+  );
 }
 
 export default Footer;

@@ -137,7 +137,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
           onChange={(e) => setInputMessage(e.target.value)}
           onKeyDown={handleKeyPress}
           className="w-[100%] h-[100%] pl-2 text-lg rounded"
-          placeholder="Enter your message"
+          placeholder="Ask our custom AI chatbot"
         />
         <button onClick={handleSendMessage} className="chatButton">
           {" "}
