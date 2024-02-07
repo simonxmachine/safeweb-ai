@@ -8,17 +8,17 @@ import About from "./pages/About";
 const NewNavbar = () => {
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [menu_class, setMenuClass] = useState("menu hidden");
+  const [menu_class, setMenuClass] = useState("menuHidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   // toggle burger menu change
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
+      setMenuClass("menu");
     } else {
       setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
+      setMenuClass("menuHidden");
     }
     setIsMenuClicked(!isMenuClicked);
   };
@@ -32,7 +32,15 @@ const NewNavbar = () => {
           </Link>
         </div>
 
-        <div className="burger-menu" onClick={updateMenu}>
+        <div className="hidden sm:block">
+          <ul className="desktopMenuUl">
+            <li className="active">Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div className="burger-menu sm:hidden" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
@@ -40,8 +48,8 @@ const NewNavbar = () => {
       </nav>
 
       <div className={`${menu_class}`}>
-        <ul className="nav-links">
-          <li>Home</li>
+        <ul className="mobileMenuUl">
+          <li className="active">Home</li>
           <li>About</li>
           <li>Contact</li>
         </ul>

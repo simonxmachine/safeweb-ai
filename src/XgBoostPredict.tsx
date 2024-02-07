@@ -21,6 +21,8 @@ const XgBoostPredict = () => {
     },
   };
 
+  const labelList = ["XG - Benign", "TF - Benign"];
+
   const formattedData = (
     <table>
       <tbody>
@@ -29,7 +31,7 @@ const XgBoostPredict = () => {
             <td>
               <tr key={label}>
                 <th className="text-lg text-left font-semibold px-5 py-2 mt-3">
-                  {label === "XG - Benign" ? (
+                  {labelList.includes(label) ? (
                     <th className="text-green-500">{label}</th>
                   ) : (
                     <th className="text-red-600">{label}</th>

@@ -56,6 +56,57 @@ nav a:hover {
 } */
 
 
+.desktopMenuUl{
+    color: white;
+    padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+
+}
+
+.desktopMenuUl li {transition: 0.3s ease-in;
+  list-style: none;
+  cursor: pointer;
+  border: 0px solid #000000;
+  color: white;
+  padding: 10px;
+  height: 40px;}
+
+.desktopMenuUl li.active {
+  color: #00e500;
+}
+
+.desktopMenuUl li:hover {
+  color: #0e89fc;
+}
+
+
+
+.mobileMenuUl{
+    color: white;
+}
+
+.mobileMenuUl li {
+transition: 0.3s ease-in;
+  cursor: pointer;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.mobileMenuUl li.active {
+  color: #00e500;
+}
+
+.mobileMenuUl li:hover {
+  color: #0e89fc;
+}
+
+
+
+
+
 nav {
   width: 100%;
   height: 5em;
@@ -67,6 +118,7 @@ nav {
   left:0;
   top:0;
   position: fixed;
+  border-bottom: 1px solid white;
 }
 
 .burger-menu {
@@ -88,19 +140,37 @@ nav {
   z-index: 20;
 }
 
+.menuHidden{
+    color: white;
+    text-align: right;
+    font-size: large;
+    padding: 30px;
+    width: 50%;
+    height: 100vh;
+    background-color: #001a33;
+    right: -100%;
+    position: fixed;
+    transition: left 5s ease-in, transform 5s ease-in; /* Ease-in for closing */
+    z-index: 2;
+
+}
+
 .menu {
     color: white;
     text-align: right;
     font-size: x-large;
     padding: 30px;
     width: 50%;
-    height: 80vh;
+    height: 100vh;
     background-color: #001a33;
-    right: -100%;
+    right: 0;
     position: fixed;
-    transition: right 1s ease-in-out, transform 1s ease-in-out;
-    z-index: 2;
+    transition: right .3s ease-out, transform .3s ease-out, opacity .3s ease-out; /* Add transitions */
+    z-index: 5;
+    opacity: .9;
 }
+
+
 
 /* ------------- sliding menu ------------------ */
 /* .hidden {
@@ -109,12 +179,12 @@ nav {
     transition: right .5s ease-in-out, opacity .5s ease-in-out; 
     right: -100%;
 } */
-
-.visible {
+/* 
+.visible{
     right: 0;
     opacity: .8;
     transform: none;
-}
+} */
 
 
 /* ----- animations--------- */
