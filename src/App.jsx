@@ -32,8 +32,6 @@ import LimitationsFuture from './LimitationsFuture';
 import Introduction from './Introduction';
 import Technology from './Technology';
 import Footer from './Footer';
-import { Analytics } from '@vercel/analytics/react';
-
 
 function App() {
   const [count, setCount] = useState(0)
@@ -190,7 +188,7 @@ function App() {
 <div className='bg-[#113768] text-white font-semibold align-middle content-center items-center justify-center min-h-[100px]' style={{ display: 'flex', alignItems: 'center' }}>
   <Footer/>
 </div>
-<Analytics />
+
     </div>
 
 
