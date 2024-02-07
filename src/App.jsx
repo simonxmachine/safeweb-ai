@@ -32,6 +32,8 @@ import LimitationsFuture from './LimitationsFuture';
 import Introduction from './Introduction';
 import Technology from './Technology';
 import Footer from './Footer';
+import { Analytics } from '@vercel/analytics';
+ 
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +43,7 @@ function App() {
 
   return (
     <div className=''>
+      <Analytics/>
       
       <Navbar />
 
