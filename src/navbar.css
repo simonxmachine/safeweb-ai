@@ -1,4 +1,3 @@
-
 /* 
 nav {
  
@@ -55,41 +54,51 @@ nav a:hover {
   color: #0e89fc;
 } */
 
-
-.desktopMenuUl{
-    color: white;
-    padding: 0;
+.desktopMenuUl {
+  color: white;
+  padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
   gap: 1rem;
-
 }
 
-.desktopMenuUl li {transition: 0.3s ease-in;
+.desktopMenuUl li {
+  transition: 0.3s ease-in;
   list-style: none;
   cursor: pointer;
   border: 0px solid #000000;
   color: white;
   padding: 10px;
-  height: 40px;}
+  height: 40px;
+}
+
+.mobileMenuUl a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  padding: 0.25rem;
+  transition: 0.3s ease;
+}
+
+.mobileMenuUl a:hover {
+  color: #00ff00;
+}
 
 .desktopMenuUl li.active {
   color: #00e500;
 }
 
 .desktopMenuUl li:hover {
-  color: #0e89fc;
+  color: #00ff00;
 }
 
-
-
-.mobileMenuUl{
-    color: white;
+.mobileMenuUl {
+  color: white;
 }
 
 .mobileMenuUl li {
-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
   cursor: pointer;
   color: white;
   padding-bottom: 10px;
@@ -100,25 +109,35 @@ transition: 0.3s ease-in;
 }
 
 .mobileMenuUl li:hover {
-  color: #0e89fc;
+  color: #00ff00;
 }
-
-
-
-
 
 nav {
   width: 100%;
   height: 5em;
-  background-color:#001a33;
+  background-color: #001a33;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   position: fixed;
   border-bottom: 1px solid white;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ff00;
 }
 
 .burger-menu {
@@ -140,37 +159,36 @@ nav {
   z-index: 20;
 }
 
-.menuHidden{
-    color: white;
-    text-align: right;
-    font-size: large;
-    padding: 30px;
-    width: 50%;
-    height: 100vh;
-    background-color: #001a33;
-    right: -100%;
-    position: fixed;
-    transition: left 5s ease-in, transform 5s ease-in; /* Ease-in for closing */
-    z-index: 2;
-
+.menuHidden {
+  color: white;
+  text-align: right;
+  font-size: large;
+  padding: 30px;
+  width: 50%;
+  height: 100vh;
+  background-color: #001a33;
+  right: -100%;
+  position: fixed;
+  transition: right 0.5s ease-out; /* Ease-in for closing */
+  z-index: 2;
+  opacity: 0.9;
 }
 
 .menu {
-    color: white;
-    text-align: right;
-    font-size: x-large;
-    padding: 30px;
-    width: 50%;
-    height: 100vh;
-    background-color: #001a33;
-    right: 0;
-    position: fixed;
-    transition: right .3s ease-out, transform .3s ease-out, opacity .3s ease-out; /* Add transitions */
-    z-index: 5;
-    opacity: .9;
+  color: white;
+  text-align: right;
+  font-size: x-large;
+  padding: 30px;
+  width: 50%;
+  height: 100vh;
+  background-color: #001a33;
+  right: 0;
+  position: fixed;
+  transition: right 0.3s ease-out, transform 0.3s ease-out,
+    opacity 0.3s ease-out; /* Add transitions */
+  z-index: 5;
+  opacity: 0.9;
 }
-
-
 
 /* ------------- sliding menu ------------------ */
 /* .hidden {
@@ -186,16 +204,15 @@ nav {
     transform: none;
 } */
 
-
 /* ----- animations--------- */
 /* clicked */
 .burger-bar.clicked:nth-child(1) {
-  transform: rotate(45deg) translate(0.30em, 1em);
+  transform: rotate(45deg) translate(0.3em, 1em);
   transition: ease-out 0.2s;
 }
 
 .burger-bar.clicked:nth-child(2) {
-  transform: scale(0.0);
+  transform: scale(0);
   transition: ease-out 0.3s;
 }
 

@@ -34,10 +34,15 @@ const NewNavbar = () => {
 
         <div className="hidden sm:block">
           <ul className="desktopMenuUl">
+            <CustomLink to="/">Home</CustomLink>
+            <CustomLink to="/about">About</CustomLink>
+            <CustomLink to="/contact">Contact</CustomLink>
+          </ul>
+          {/* <ul className="desktopMenuUl">
             <li className="active">Home</li>
             <li>About</li>
             <li>Contact</li>
-          </ul>
+          </ul> */}
         </div>
 
         <div className="burger-menu sm:hidden" onClick={updateMenu}>
@@ -49,13 +54,26 @@ const NewNavbar = () => {
 
       <div className={`${menu_class}`}>
         <ul className="mobileMenuUl">
-          <li className="active">Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/about">About</CustomLink>
+          <CustomLink to="/contact">Contact</CustomLink>
         </ul>
       </div>
     </div>
   );
 };
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  );
+}
 
 export default NewNavbar;
