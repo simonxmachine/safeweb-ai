@@ -161,7 +161,7 @@ nav a:hover {
 .menuHidden {
   color: white;
   text-align: right;
-  font-size: large;
+  font-size: x-large;
   padding: 30px;
   width: 50%;
   height: 100vh;
@@ -176,7 +176,7 @@ nav a:hover {
 .menu {
   color: white;
   text-align: right;
-  font-size: large;
+  font-size: x-large;
   padding: 30px;
   width: 50%;
   height: 100vh;
