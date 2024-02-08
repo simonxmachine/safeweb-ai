@@ -127,7 +127,7 @@ const NewNavbar = ({
       <div className={`${menu_class}`}>
         <ul className="mobileMenuUl">
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="#data-analysis">About</CustomLink>
+          <CustomLink to="/about">About</CustomLink>
           <CustomLink to="/contact">Contact</CustomLink>
         </ul>
       </div>

@@ -100,7 +100,7 @@ function App() {
   
 
 
-      <hr ref={homeRef} id="home-section" className='headerBar' />
+      <section ref={homeRef} id="home-section" className='headerBar' />
 
         <XgBoostPredict/>
   
