@@ -12,8 +12,7 @@ import nginx from "./assets/NGINX.png";
 import aws from "./assets/AWS.png";
 
 import docker from "./assets/Docker.png";
-import github from "./assets/Github.png";
-
+import github from "./assets/new_github.png";
 import javascript from "./assets/JavaScript.png";
 import openai from "./assets/open-ai.png";
 import react from "./assets/React.png";
