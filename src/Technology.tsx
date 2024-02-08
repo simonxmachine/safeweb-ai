@@ -1,6 +1,24 @@
 import React from "react";
-import confusionMatrix from "./assets/xgboost5_confusion_matrix.png"; // Import your logo image
-import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Import your logo image
+import confusionMatrix from "./assets/xgboost5_confusion_matrix.png";
+import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png";
+
+import googleColab from "./assets/google_cloud.png";
+import python from "./assets/Python.png";
+import sklearn from "./assets/scikit-learn.png";
+import tensorflow from "./assets/TensorFlow.png";
+import pandas from "./assets/Pandas.png";
+
+import nginx from "./assets/NGINX.png";
+import aws from "./assets/AWS.png";
+
+import docker from "./assets/Docker.png";
+import github from "./assets/Github.png";
+
+import javascript from "./assets/JavaScript.png";
+import openai from "./assets/open-ai.png";
+import react from "./assets/React.png";
+import tailwind from "./assets/tailwind.png";
+import vercel from "./assets/Vercel.png";
 
 export default function Technology() {
   return (
@@ -8,25 +26,20 @@ export default function Technology() {
       <div className="mb-10 max-w-[1050px] mobile-text">
         <h2 className="h2-bold">References & Technologies Used</h2>
         <br />
-        <p className="w-[100%]">
-          We can see that the two models have high accuracy making predictions
-          on test data, but there is room for further improvement, because even
-          1% error can be disastrous for a company/individual.
-        </p>
       </div>
 
       <div>
         <div
           className={` 
           ${
-            window.innerWidth < 500
-              ? "text-sm grid grid-cols-2 justify-left border-0 border-black gap-4 m-[auto] items-center"
-              : "text-lg grid grid-cols-2 justify-left border-0 border-black gap-10 m-[auto] items-center "
+            window.innerWidth < 600
+              ? "text-sm grid grid-cols-2 justify-center border-0 border-black gap-6 m-[auto] items-center"
+              : "text-lg grid grid-cols-2 justify-center border-0 border-black gap-10 ml-16 items-center "
           }`}
         >
           <div className="justify-left items-center gap-3 flex flex-row">
             <img
-              src={confusionMatrix}
+              src={python}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -35,7 +48,7 @@ export default function Technology() {
 
           <div className="justify-left items-center gap-3 flex flex-row">
             <img
-              src={confusionMatrix}
+              src={googleColab}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -44,43 +57,7 @@ export default function Technology() {
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
-              src={tensorflowMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>SciKit-Learn</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={confusionMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>Tensorflow</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={confusionMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>Pandas</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={tensorflowMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>OpenAI</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={tensorflowMatrix}
+              src={javascript}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -89,7 +66,7 @@ export default function Technology() {
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
-              src={confusionMatrix}
+              src={react}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -98,34 +75,7 @@ export default function Technology() {
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
-              src={tensorflowMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>Tailwind CSS</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={tensorflowMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>Docker</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={tensorflowMatrix}
-              alt="XG Boost Confusion Matrix"
-              className="tech-logo"
-            />
-            <div>Nginx</div>
-          </div>
-
-          <div className="items-center justify-left  gap-3 flex flex-row">
-            <img
-              src={tensorflowMatrix}
+              src={aws}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -134,7 +84,70 @@ export default function Technology() {
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
-              src={tensorflowMatrix}
+              src={docker}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>Docker</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={openai}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>OpenAI</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={tensorflow}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>Tensorflow</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={pandas}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>Pandas</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={sklearn}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>SciKit-Learn</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={tailwind}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>Tailwind CSS</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={nginx}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div>Nginx</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={vercel}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
@@ -143,7 +156,7 @@ export default function Technology() {
 
           <div className="items-center justify-left  gap-3 flex flex-row">
             <img
-              src={tensorflowMatrix}
+              src={github}
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />

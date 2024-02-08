@@ -84,8 +84,9 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
       </h2>
 
       <p className="mb-10 mobile-text px-[30px]">
-        Talk to our custom AI chatbot! Our company data and frequently asked
-        questions was embedded into the OpenAI API so we can serve you better!
+        Talk to our custom AI chatbot! Our company data and FAQ were embedded
+        into the OpenAI API so we can serve you better! Feel free to ask
+        detailed questions about how our model and platform was built!
       </p>
       <div
         className="chat-history"
