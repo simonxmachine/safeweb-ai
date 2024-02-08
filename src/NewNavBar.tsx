@@ -45,7 +45,12 @@ const NewNavbar = ({
       <nav>
         <div>
           <Link to="/" className="site-title">
-            <img src={logo} alt="Logo" className="logo" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="logo"
+              onClick={() => handleScrollToTop(homeRef)}
+            />
           </Link>
         </div>
 
