@@ -23,6 +23,11 @@ const NewNavbar = ({
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleScrollToTop = (ref) => {
+    // Instead of scrolling to the ref, scroll to the top of the page:
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // toggle burger menu change
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -48,7 +53,7 @@ const NewNavbar = ({
           <ul className="desktopMenuUl">
             <li>
               <a
-                onClick={() => handleScrollToSection(homeRef)}
+                onClick={() => handleScrollToTop(homeRef)}
                 className={
                   activeSection === "home-section" ? "highlight-green" : ""
                 }
@@ -126,9 +131,69 @@ const NewNavbar = ({
 
       <div className={`${menu_class}`}>
         <ul className="mobileMenuUl">
-          <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/about">About</CustomLink>
-          <CustomLink to="/contact">Contact</CustomLink>
+          <li>
+            <span
+              onClick={() => handleScrollToTop(homeRef)}
+              className={
+                activeSection === "home-section" ? "highlight-green" : ""
+              }
+            >
+              Home
+            </span>
+          </li>
+          <li>
+            <span
+              onClick={() => handleScrollToSection(dataRef)}
+              className={
+                activeSection === "data-section" ? "highlight-green" : ""
+              }
+            >
+              Dataset
+            </span>
+          </li>
+          <li>
+            <span
+              onClick={() => handleScrollToSection(analysisRef)}
+              className={
+                activeSection === "analysis-section" ? "highlight-green" : ""
+              }
+            >
+              Analysis
+            </span>
+          </li>
+
+          <li>
+            <span
+              onClick={() => handleScrollToSection(trainingRef)}
+              className={
+                activeSection === "training-section" ? "highlight-green" : ""
+              }
+            >
+              Training
+            </span>
+          </li>
+
+          <li>
+            <span
+              onClick={() => handleScrollToSection(evaluationRef)}
+              className={
+                activeSection === "evaluation-section" ? "highlight-green" : ""
+              }
+            >
+              Evaluation
+            </span>
+          </li>
+
+          <li>
+            <span
+              onClick={() => handleScrollToSection(chatbotRef)}
+              className={
+                activeSection === "chat-section" ? "highlight-green" : ""
+              }
+            >
+              AI Chatbot
+            </span>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,12 +1,11 @@
 import React from "react";
-import confusionMatrix from "./assets/xgboost5_confusion_matrix.png";
-import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png";
+import malwareImage from "./assets/malware_image2.jpg"; // Import your logo image
 
 export default function Introduction() {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="h2-bold">Why did we build this...?</h2>
+        <h2 className="h2-bold">Why did we build the scanner?</h2>
         <br />
         <p>
           Malicious URLs are a serious threat to cybersecurity; they host
@@ -16,11 +15,14 @@ export default function Introduction() {
       </div>
 
       <div>
-        <div
-          className={`flex ${
-            window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
-          } justify-center items-center`}
-        >
+        <div className={`flex justify-center mt-5`}>
+          <img
+            src={malwareImage}
+            alt="XG Boost Confusion Matrix"
+            className={`${
+              window.innerWidth < 700 ? "w-[90%]" : "w-[50%] max-w-[700px]"
+            } `}
+          />
           {/* <img
             src={confusionMatrix}
             alt="XG Boost Confusion Matrix"

@@ -213,7 +213,7 @@ function App() {
 
         <hr className='horizontalBar' />
 
-        <div className='homeContainers'>
+        <div className='homeContainers pb-0'>
 
       <Technology />
 
@@ -222,7 +222,7 @@ function App() {
 
       <hr ref={chatbotRef} id="chat-section" className='headerBar'  />
 
-        <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[80px] pb-[80px]'>
+        <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[70px] pb-[80px]'>
         
 
 

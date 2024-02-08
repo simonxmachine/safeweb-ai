@@ -54,15 +54,15 @@ nav a:hover {
   color: #0e89fc;
 } */
 
-.mobileMenuUl a {
-  color: inherit;
+.mobileMenuUl {
+  color: white;
   text-decoration: none;
   height: 100%;
   transition: 0.3s ease;
 }
 
-.mobileMenuUl {
-  color: white;
+.mobileMenuUl span {
+  font-weight: 400;
 }
 
 .mobileMenuUl a:hover {
