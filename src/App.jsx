@@ -44,6 +44,7 @@ function App() {
   const analysisRef = useRef(null);
   const trainingRef = useRef(null);
   const evaluationRef = useRef(null);
+  const chatbotRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -63,25 +64,27 @@ function App() {
     const thirdSection = analysisRef.current;
     const fourthSection = trainingRef.current;
     const fifthSection = evaluationRef.current;
+    const sixthSection = chatbotRef.current;
     
     observer.observe(firstSection);
     observer.observe(secondSection);
     observer.observe(thirdSection);
     observer.observe(fourthSection);
     observer.observe(fifthSection);
+    observer.observe(sixthSection);
   
   
     return () => {
       observer.disconnect();
     };
-  }, [homeRef, dataRef, analysisRef, trainingRef, evaluationRef]);
+  }, [homeRef, dataRef, analysisRef, trainingRef, evaluationRef, chatbotRef]);
 
 
 
   return (
     <div  className=''>
 
-      <Navbar homeRef={homeRef} dataRef={dataRef} analysisRef={analysisRef}  trainingRef={trainingRef} evaluationRef={evaluationRef} activeSection={activeSection} />
+      <Navbar homeRef={homeRef} dataRef={dataRef} analysisRef={analysisRef}  trainingRef={trainingRef} evaluationRef={evaluationRef} chatbotRef={chatbotRef} activeSection={activeSection} />
       <Analytics />
       {/* <Routes>
         <Route path="/" element={<Home />} />
@@ -95,7 +98,9 @@ function App() {
 
       <div className='w-[100%] px-0 justify-center space-y-20 mx-auto align-middle items-center'>
   
-      <section ref={homeRef} id="home-section">
+
+
+      <hr ref={homeRef} id="home-section" className='headerBar' />
 
         <XgBoostPredict/>
   
@@ -105,13 +110,10 @@ function App() {
       <Introduction />
 
       </div>
-      </section>
-
-
 
 
       <hr ref={dataRef}  id="data-section" className='horizontalBar' />
-      <section  >
+
 
 
         <div  className='homeContainers'>
@@ -138,7 +140,7 @@ function App() {
                 <UpdatedDataset />
       
         </div>
-        </section>
+
 
 
         <hr ref={analysisRef} id="analysis-section" className='horizontalBar' />
@@ -218,9 +220,11 @@ function App() {
       </div>
 
 
-
+      <hr ref={chatbotRef} id="chat-section" className='headerBar'  />
 
         <div className='flex bg-[#d0e3f9] justify-center align-middle content-center items-center h-[100%] text-lg pt-[80px] pb-[80px]'>
+        
+
 
         <Chatbox />
         </div>

@@ -13,6 +13,7 @@ const NewNavbar = ({
   trainingRef,
   evaluationRef,
   activeSection,
+  chatbotRef,
 }) => {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [menu_class, setMenuClass] = useState("menuHidden");
@@ -83,7 +84,7 @@ const NewNavbar = ({
                   activeSection === "training-section" ? "highlight-green" : ""
                 }
               >
-                Model Training
+                Training
               </a>
             </li>
 
@@ -96,7 +97,18 @@ const NewNavbar = ({
                     : ""
                 }
               >
-                Result Evaluation
+                Evaluation
+              </a>
+            </li>
+
+            <li>
+              <a
+                onClick={() => handleScrollToSection(chatbotRef)}
+                className={
+                  activeSection === "chat-section" ? "highlight-green" : ""
+                }
+              >
+                AI Chatbot
               </a>
             </li>
             {/* <CustomLink to="/">Home</CustomLink>
