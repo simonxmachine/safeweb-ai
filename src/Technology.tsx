@@ -23,8 +23,7 @@ export default function Technology() {
   return (
     <div className="flex flex-col items-center">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="h2-bold">References & Technologies Used</h2>
-        <br />
+        <h2 className="h2-bold mb-6">References & Technologies Used</h2>
       </div>
 
       <div>
