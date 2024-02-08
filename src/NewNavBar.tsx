@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState, useRef, useEffect } from "react";
 import "./navbar.css";
 import logo from "./assets/react.svg";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 
-const NewNavbar = () => {
-  // to change burger classes
+const NewNavbar = ({
+  homeRef,
+  dataRef,
+  analysisRef,
+  trainingRef,
+  evaluationRef,
+  activeSection,
+}) => {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [menu_class, setMenuClass] = useState("menuHidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const handleScrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   // toggle burger menu change
   const updateMenu = () => {
@@ -34,15 +45,64 @@ const NewNavbar = () => {
 
         <div className="hidden sm:block">
           <ul className="desktopMenuUl">
-            <CustomLink to="/">Home</CustomLink>
+            <li>
+              <a
+                onClick={() => handleScrollToSection(homeRef)}
+                className={
+                  activeSection === "home-section" ? "highlight-green" : ""
+                }
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => handleScrollToSection(dataRef)}
+                className={
+                  activeSection === "data-section" ? "highlight-green" : ""
+                }
+              >
+                Dataset
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => handleScrollToSection(analysisRef)}
+                className={
+                  activeSection === "analysis-section" ? "highlight-green" : ""
+                }
+              >
+                Analysis
+              </a>
+            </li>
+
+            <li>
+              <a
+                onClick={() => handleScrollToSection(trainingRef)}
+                className={
+                  activeSection === "training-section" ? "highlight-green" : ""
+                }
+              >
+                Model Training
+              </a>
+            </li>
+
+            <li>
+              <a
+                onClick={() => handleScrollToSection(evaluationRef)}
+                className={
+                  activeSection === "evaluation-section"
+                    ? "highlight-green"
+                    : ""
+                }
+              >
+                Result Evaluation
+              </a>
+            </li>
+            {/* <CustomLink to="/">Home</CustomLink>
             <CustomLink to="/about">About</CustomLink>
-            <CustomLink to="/contact">Contact</CustomLink>
+            <CustomLink to="/contact">Contact</CustomLink> */}
           </ul>
-          {/* <ul className="desktopMenuUl">
-            <li className="active">Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul> */}
         </div>
 
         <div className="burger-menu sm:hidden" onClick={updateMenu}>
@@ -55,7 +115,7 @@ const NewNavbar = () => {
       <div className={`${menu_class}`}>
         <ul className="mobileMenuUl">
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/about">About</CustomLink>
+          <CustomLink to="#data-analysis">About</CustomLink>
           <CustomLink to="/contact">Contact</CustomLink>
         </ul>
       </div>

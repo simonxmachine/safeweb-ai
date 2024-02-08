@@ -204,6 +204,10 @@ p {
   line-height: 22px;
 }
 
+.highlight-green {
+  color: #00e500;
+}
+
 .homeContainers {
   display: flex;
   justify-content: center;
@@ -227,6 +231,10 @@ h2 {
   .mobile-text {
     text-align: left;
   }
+}
+section {
+  padding: 0;
+  margin: 0;
 }
 
 .tech-logo {
@@ -264,7 +272,7 @@ h2 {
 
 .chatButton {
   color: black;
-  border: 1px solid transparent;
+  border: 1px solid green;
   background-color: #00e500;
   height: 100%;
   transition: 0.3s ease;

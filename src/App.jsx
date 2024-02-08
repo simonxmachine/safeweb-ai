@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Greeting} from './Greeting';
-import Navbar from './Navbar';
+import Navbar from './NewNavBar';
 import Boxes from './Boxes';
 import NewForm from './NewForm';
 import MappingData from './MappingData';
-// import Chatbox from './Chatbox';
 import ProductList from './ProductList';
 import { Link, Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact";
@@ -38,39 +37,84 @@ import { Analytics } from '@vercel/analytics/react';
 function App() {
   const [count, setCount] = useState(0)
   const [response, setResponse] = useState("This is standard response")
+  const [activeSection, setActiveSection] = useState(null);
 
-  const isMediumScreen = window.innerWidth >= 600;
+  const homeRef = useRef(null)
+  const dataRef = useRef(null);
+  const analysisRef = useRef(null);
+  const trainingRef = useRef(null);
+  const evaluationRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const activeElement = entries.find((entry) => entry.isIntersecting);
+      if (activeElement) {
+        setActiveSection(activeElement.target.id);
+      }
+      // } else {
+      //   // If no section is in view, remove the highlight
+      //   setActiveSection(null);
+      // }
+    });
+  
+    // Observe the section below the viewport initially:
+    const firstSection = homeRef.current;
+    const secondSection = dataRef.current;
+    const thirdSection = analysisRef.current;
+    const fourthSection = trainingRef.current;
+    const fifthSection = evaluationRef.current;
+    
+    observer.observe(firstSection);
+    observer.observe(secondSection);
+    observer.observe(thirdSection);
+    observer.observe(fourthSection);
+    observer.observe(fifthSection);
+  
+  
+    return () => {
+      observer.disconnect();
+    };
+  }, [homeRef, dataRef, analysisRef, trainingRef, evaluationRef]);
+
+
 
   return (
-    <div className=''>
+    <div  className=''>
 
-      <Navbar />
+      <Navbar homeRef={homeRef} dataRef={dataRef} analysisRef={analysisRef}  trainingRef={trainingRef} evaluationRef={evaluationRef} activeSection={activeSection} />
       <Analytics />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-      </Routes>
+      </Routes> */}
 
      <div className='align-center w-[100%] items-center justify-center content-center'>
 
 
+
       <div className='w-[100%] px-0 justify-center space-y-20 mx-auto align-middle items-center'>
-       
+  
+      <section ref={homeRef} id="home-section">
 
-      <XgBoostPredict />
-
+        <XgBoostPredict/>
+  
 
       <div className='homeContainers'>
 
       <Introduction />
 
       </div>
+      </section>
 
 
-      <hr className='horizontalBar' />
 
-        <div className='homeContainers'>
+
+      <hr ref={dataRef}  id="data-section" className='horizontalBar' />
+      <section  >
+
+
+        <div  className='homeContainers'>
 
             <DataFrameTable />
 
@@ -86,7 +130,7 @@ function App() {
         </div>
 
 
-      <hr className='horizontalBar' />
+      <hr   className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -94,10 +138,10 @@ function App() {
                 <UpdatedDataset />
       
         </div>
+        </section>
 
 
-
-        <hr className='horizontalBar' />
+        <hr ref={analysisRef} id="analysis-section" className='horizontalBar' />
 
         <div className='homeContainers'>
                 
@@ -106,7 +150,7 @@ function App() {
         </div>
 
 
-      <hr className='horizontalBar' />
+      <hr  className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -116,7 +160,7 @@ function App() {
         </div>
 
 
-        <hr className='horizontalBar' />
+        <hr ref={trainingRef}  id="training-section" className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -126,7 +170,7 @@ function App() {
         </div>
 
 
-        <hr className='horizontalBar' />
+        <hr ref={evaluationRef} id="evaluation-section" className='horizontalBar' />
 
 
         <div className='homeContainers'>
@@ -137,7 +181,7 @@ function App() {
 
 
 
-        <hr className='horizontalBar' />
+        <hr   className='horizontalBar' />
 
 
         <div className='homeContainers'>
