@@ -1,6 +1,5 @@
 import React from "react";
-import confusionMatrix from "./assets/xgboost5_confusion_matrix.png"; // Import your logo image
-import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Import your logo image
+import summaryImage from "./assets/safeweb_image.jpg"; // Import your logo image
 
 export default function LimitationsFuture() {
   return (
@@ -43,14 +42,13 @@ export default function LimitationsFuture() {
             <br />
             <li>
               <strong>
-                {" "}
-                3) Expansion of feature space and hyperparemeter optimization.
+                3) Expansion of feature space and hyperparemeter optimization.{" "}
               </strong>
               Incorporating additional features, such as originating country
-              detection and common character patterns, could better capture the
-              complexity of deeply embedded malicious URLs. In addition,
-              implementing regularization techniques like L1, L2, and dropout
-              can mitigate overfitting risks and potentially improve model
+              detection and common character patterns, could better capture
+              complex and deeply embedded malicious URLs. In addition,
+              implementing regularization techniques such as L1, L2, and dropout
+              can mitigate overfitting and potentially improve model
               performance.
             </li>
           </ul>
@@ -64,29 +62,19 @@ export default function LimitationsFuture() {
             </span>
           </strong>
         </p>
-      </div>
 
-      <div>
-        <div
-          className={`flex ${
-            window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
-          } justify-center items-center`}
-        >
-          {/* <img
-            src={confusionMatrix}
-            alt="XG Boost Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          />
-
-          <img
-            src={tensorflowMatrix}
-            alt="Tensorflow Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          /> */}
+        <div>
+          <div className={`flex justify-center `}>
+            <img
+              src={summaryImage}
+              alt="XG Boost Confusion Matrix"
+              className={`${
+                window.innerWidth < 700
+                  ? "w-[90%] mt-20"
+                  : "w-[50%] mt-24 max-w-[400px]"
+              } `}
+            />
+          </div>
         </div>
       </div>
     </div>

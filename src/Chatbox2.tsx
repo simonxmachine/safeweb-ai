@@ -83,7 +83,7 @@ const ChatBox: React.FC<ChatBoxProps> = () => {
         Have additional questions?
       </h2>
 
-      <p className="mb-10 mobile-text px-[30px]">
+      <p className="mb-6 mobile-text px-[30px]">
         Start a conversation with our custom, dedicated AI assistant! 24/7
         availability ensures you receive prompt and insightful responses;
         powered by the OpenAI API embedded with our company-specific data and

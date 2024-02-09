@@ -31,7 +31,7 @@ export default function Technology() {
           ${
             window.innerWidth < 600
               ? "text-sm grid grid-cols-3 justify-center border-0 border-black gap-12 m-[auto] items-center"
-              : "text-lg grid grid-cols-3 justify-center border-0 border-black gap-12 items-center "
+              : "text-lg grid grid-cols-3 justify-center border-0 border-black gap-12 ml-4 items-center "
           }`}
         >
           <div className="justify-left items-center gap-3 flex flex-row">

@@ -5,7 +5,7 @@ import tensorflowMatrix from "./assets/tensorflow6_confusion_matrix.png"; // Imp
 export default function Summary() {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[1050px] mobile-text">
+      <div className="mb-4 max-w-[1050px] mobile-text">
         <h2 className="h2-bold">Summary & Key Findings</h2>
         <br />
         <p>
@@ -22,30 +22,6 @@ export default function Summary() {
           model's robustness and its ability to accurately identify malicious
           actors in various scenarios.
         </p>
-      </div>
-
-      <div>
-        <div
-          className={`flex ${
-            window.innerWidth < 800 ? "flex-col gap-12" : "flex-row gap-16"
-          } justify-center items-center`}
-        >
-          {/* <img
-            src={confusionMatrix}
-            alt="XG Boost Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          />
-
-          <img
-            src={tensorflowMatrix}
-            alt="Tensorflow Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          /> */}
-        </div>
       </div>
     </div>
   );

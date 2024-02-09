@@ -84,7 +84,7 @@ const XgBoostPredict = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[50vh] text-3xl">
+    <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[60vh] text-3xl">
       Scan URL for Malware
       <div className="flex flex-row mt-5 mb-5 gap-3 w-[90%] h-[40px] justify-center items-center text-black text-lg">
         <input
@@ -98,6 +98,11 @@ const XgBoostPredict = () => {
         <button className="predictButton" onClick={handleSendMessage}>
           <ScanSearch size={24} />
         </button>
+      </div>
+      <div className="text-xs px-4 text-[#FFFF00]">
+        *This scanner is intended for educational and experimental purposes
+        only. It is not designed for real-world use, and its results should not
+        be relied upon for critical decisions.{" "}
       </div>
       <div className="text-sm">{formattedData}</div>
     </div>

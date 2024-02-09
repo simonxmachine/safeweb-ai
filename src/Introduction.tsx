@@ -23,21 +23,6 @@ export default function Introduction() {
               window.innerWidth < 700 ? "w-[90%]" : "w-[50%] max-w-[700px]"
             } `}
           />
-          {/* <img
-            src={confusionMatrix}
-            alt="XG Boost Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          />
-
-          <img
-            src={tensorflowMatrix}
-            alt="Tensorflow Confusion Matrix"
-            className={`${
-              window.innerWidth < 700 ? "w-[100%]" : "w-[50%] max-w-[400px]"
-            } `}
-          /> */}
         </div>
       </div>
     </div>
