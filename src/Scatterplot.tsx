@@ -27,6 +27,8 @@ const options = {
       },
     },
   },
+  maintainAspectRatio: true,
+  aspectRatio: window.innerWidth <= 600 ? 1 | 1 : 2 | 2,
 };
 
 //Correlation between letters_count and special characters

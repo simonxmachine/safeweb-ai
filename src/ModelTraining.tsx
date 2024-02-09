@@ -6,7 +6,7 @@ const DataframeTable = () => {
     <div className="flex flex-col">
       <div className="mb-10 max-w-[700px] mobile-text">
         <h2 className="h2-bold">
-          Now let's train the models and get some predictions...
+          After normalizing the data, let's start training the models...
         </h2>
         <br />
         <p>

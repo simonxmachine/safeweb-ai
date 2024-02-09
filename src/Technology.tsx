@@ -7,10 +7,8 @@ import python from "./assets/Python.png";
 import sklearn from "./assets/scikit-learn.png";
 import tensorflow from "./assets/TensorFlow.png";
 import pandas from "./assets/Pandas.png";
-
 import nginx from "./assets/NGINX.png";
 import aws from "./assets/AWS.png";
-
 import docker from "./assets/Docker.png";
 import github from "./assets/new_github.png";
 import javascript from "./assets/JavaScript.png";
@@ -32,7 +30,7 @@ export default function Technology() {
           ${
             window.innerWidth < 600
               ? "text-sm grid grid-cols-3 justify-center border-0 border-black gap-12 m-[auto] items-center"
-              : "text-lg grid grid-cols-2 justify-center border-0 border-black gap-12 ml-0 items-center "
+              : "text-lg grid grid-cols-3 justify-center border-0 border-black gap-12 items-center "
           }`}
         >
           <div className="justify-left items-center gap-3 flex flex-row">
