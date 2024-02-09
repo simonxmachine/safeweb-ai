@@ -9,9 +9,9 @@ const BarAndDoughnut = () => {
         <h2 className="h2-bold">Visual breakdown of the data...</h2>
         <br />
         <p>
-          Notice how there are many more data points labeled the 'Benign' class
-          than the other 3 classes; this imbalance may be skewed to the majority
-          class and affect prediction accuracy.
+          Notice there are many more data points labeled 'Benign' than the 3
+          other classes; this imbalance is skewed to the majority class and may
+          affect prediction accuracy.
         </p>
       </div>
 

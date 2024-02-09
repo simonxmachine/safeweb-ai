@@ -16,6 +16,7 @@ import openai from "./assets/open-ai.png";
 import react from "./assets/React.png";
 import tailwind from "./assets/tailwind.png";
 import vercel from "./assets/Vercel.png";
+import kaggle from "./assets/Kaggle.png";
 
 export default function Technology() {
   return (
@@ -139,6 +140,15 @@ export default function Technology() {
               className="tech-logo"
             />
             <div className="tech-text">Nginx</div>
+          </div>
+
+          <div className="items-center justify-left  gap-3 flex flex-row">
+            <img
+              src={kaggle}
+              alt="XG Boost Confusion Matrix"
+              className="tech-logo"
+            />
+            <div className="tech-text">Kaggle</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">

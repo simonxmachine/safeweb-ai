@@ -10,12 +10,9 @@ const ScatterplotComponent = () => {
         <h2 className="h2-bold">Identifying abnormalities and outliers...</h2>
         <br />
         <p>
-          We added distinguishing features such as url length, number of digits,
-          number of special characters, and if it contains common prefixes such
-          as 'www, http, and https'. Notice the few sparse outliers in this
-          sample from the dataset; these outliers need to investigated further
-          as they may have a negative impact on the predicting power of the
-          model.
+          Notice the few sparse outliers in this sample taken from the dataset;
+          these outliers need to investigated further as they may skew the
+          normalizing and scaling of the features.
         </p>
       </div>
 

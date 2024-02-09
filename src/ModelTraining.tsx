@@ -6,13 +6,14 @@ const DataframeTable = () => {
     <div className="flex flex-col">
       <div className="mb-10 max-w-[700px] mobile-text">
         <h2 className="h2-bold">
-          After normalizing the data, let's start training the models...
+          After cleaning the data and normalizing features, we can train and
+          test the models...
         </h2>
         <br />
         <p>
-          We decided to use XG-Boost and a multi-layer neural network as our
-          models due to their advanced, award winning architectures and
-          predicting power.
+          We opted to implement XG-Boost and a multi-layer neural network as our
+          models due to their advanced architectures and powerful predicting
+          accuracy.
         </p>
       </div>
 

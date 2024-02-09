@@ -14,12 +14,12 @@ const HeatMapComponent = () => {
         </h2>
         <br />
         <p>
-          This heatmap helps us identify and visualize correlations between the
+          A heatmap helps us identify and visualize correlations between the
           different features.
           <br />
           <br />
-          There appears to be some correlation between the Defacement class and
-          the 'http' and 'www' features. Let's investigate further.{" "}
+          This heatmap suggests a potential association between the Defacement
+          class and the 'http' and 'www' features. Let's investigate further.{" "}
         </p>
       </div>
 

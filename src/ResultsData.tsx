@@ -9,10 +9,10 @@ const ResultsData = () => {
         <h2 className="italic h2-bold">And the result...</h2>
         <br />
         <p>
-          XG-Boost appears to have better evaluation metrics almost all across
-          the board! This may be due to the neural network overfitting, with
-          high accuracy on training data but performing poorly when making
-          inferences on new data.
+          XGBoost exhibits superior performance across multiple metrics. This
+          could be attributed to the neural network's susceptibility to
+          overfitting, where it achieves high accuracy on training data but
+          struggles to generalize on new unseen data.
         </p>
       </div>
 

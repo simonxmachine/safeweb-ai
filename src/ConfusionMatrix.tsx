@@ -9,9 +9,10 @@ export default function ConfusionMatrix() {
         <h2 className="h2-bold">Confusion matrix comparison...</h2>
         <br />
         <p>
-          We can see that the two models have high accuracy making predictions
-          on test data, but there is room for further improvement, because even
-          1% error can be disastrous for a company/individual.
+          While both models achieve high accuracy on the majority "Benign"
+          class, their ability to differentiate between the three malicious
+          classes is limited, necessitating further investigation and
+          alternative solutions.
         </p>
       </div>
 

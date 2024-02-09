@@ -9,9 +9,18 @@ export default function Summary() {
         <h2 className="h2-bold">Summary & Key Findings</h2>
         <br />
         <p>
-          We can see that the two models have high accuracy making predictions
-          on test data, but there is room for further improvement, because even
-          1% error can be disastrous for a company/individual.
+          In this application, we shared the inner workings of the beta version
+          of our malware scanner. We explained the key steps taken to develop
+          the underlying machine learning model, from data extraction and
+          cleaning to analysis and evaluation of results.
+          <br /> <br />
+          While initial evaluation metrics indicate high accuracy on both
+          models, the low recall suggests potential overfitting, characterized
+          by a large amount of false negatives. This implies the models perform
+          well on training data but may struggle with generalizing new unseen
+          data. We recognize the need for further refinement to ensure the
+          model's robustness and its ability to accurately identify malicious
+          actors in various scenarios.
         </p>
       </div>
 

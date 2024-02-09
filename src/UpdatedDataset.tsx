@@ -12,8 +12,8 @@ const DataframeTable = () => {
         <br />
         <p>
           We added distinguishing features such as url length, number of digits,
-          number of special characters, and if it contains common prefixes such
-          as 'www, http, and https'.
+          number of special characters, and if the URL contains common prefixes
+          such as 'www, http, and https'.
         </p>
       </div>
 
