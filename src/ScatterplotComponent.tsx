@@ -7,9 +7,7 @@ const ScatterplotComponent = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="h2-bold">
-          Identifying abnormalities and outliers in the data...
-        </h2>
+        <h2 className="h2-bold">Identifying abnormalities and outliers...</h2>
         <br />
         <p>
           We added distinguishing features such as url length, number of digits,
