@@ -31,8 +31,8 @@ export default function Technology() {
           className={` 
           ${
             window.innerWidth < 600
-              ? "text-sm grid grid-cols-2 justify-center border-0 border-black gap-6 m-[auto] items-center"
-              : "text-lg grid grid-cols-2 justify-center border-0 border-black gap-10 ml-16 items-center "
+              ? "text-sm grid grid-cols-3 justify-center border-0 border-black gap-12 m-[auto] items-center"
+              : "text-lg grid grid-cols-2 justify-center border-0 border-black gap-12 ml-0 items-center "
           }`}
         >
           <div className="justify-left items-center gap-3 flex flex-row">
@@ -41,7 +41,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Python</div>
+            <div className="tech-text">Python</div>
           </div>
 
           <div className="justify-left items-center gap-3 flex flex-row">
@@ -50,7 +50,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div className="text-left">Google Colab</div>
+            <div className="text-left tech-text">Google Colab</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -59,7 +59,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Javscript</div>
+            <div className="tech-text">Javscript</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -68,7 +68,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>React</div>
+            <div className="tech-text">React</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -77,7 +77,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div className="text-left">AWS EC2, ECS,Fargate</div>
+            <div className="text-left tech-text">AWS</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -86,7 +86,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Docker</div>
+            <div className="tech-text">Docker</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -95,7 +95,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>OpenAI</div>
+            <div className="tech-text">OpenAI</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -104,7 +104,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Tensorflow</div>
+            <div className="tech-text">Tensorflow</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -113,7 +113,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Pandas</div>
+            <div className="tech-text">Pandas</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -122,7 +122,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>SciKit-Learn</div>
+            <div className="tech-text">SciKit-Learn</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -131,7 +131,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Tailwind CSS</div>
+            <div className="tech-text">Tailwind CSS</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -140,7 +140,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Nginx</div>
+            <div className="tech-text">Nginx</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -149,7 +149,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Vercel</div>
+            <div className="tech-text">Vercel</div>
           </div>
 
           <div className="items-center justify-left  gap-3 flex flex-row">
@@ -158,7 +158,7 @@ export default function Technology() {
               alt="XG Boost Confusion Matrix"
               className="tech-logo"
             />
-            <div>Github</div>
+            <div className="tech-text">Github</div>
           </div>
         </div>
       </div>

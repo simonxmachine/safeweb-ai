@@ -264,24 +264,24 @@ const benignData = [
 const data = {
   datasets: [
     {
-      label: "Defacement",
-      data: defacementData,
-      backgroundColor: "rgba(255, 99, 132, 1)",
+      label: "Benign",
+      data: benignData,
+      backgroundColor: "#428bca",
     },
     {
-      label: "Malware",
-      data: malwareData,
-      backgroundColor: "green",
+      label: "Defacement",
+      data: defacementData,
+      backgroundColor: "#5cb85c",
     },
     {
       label: "Phishing",
       data: phishingData,
-      backgroundColor: "purple",
+      backgroundColor: "#5bc0de",
     },
     {
-      label: "Benign",
-      data: benignData,
-      backgroundColor: "blue",
+      label: "Malware",
+      data: malwareData,
+      backgroundColor: "#d9534f",
     },
   ],
 };

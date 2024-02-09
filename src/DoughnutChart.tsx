@@ -11,7 +11,7 @@ export default function DoughnutChart() {
       {
         label: "Distribution",
         data: [65.7, 14.8, 14.5, 4.99],
-        backgroundColor: ["blue", "red", "green", "purple"],
+        backgroundColor: ["#428bca", "#5cb85c", "#5bc0de", "#d9534f"],
         borderColor: ["white", "white", "white", "white"],
       },
     ],

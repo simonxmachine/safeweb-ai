@@ -49,11 +49,11 @@ export default function BarChart() {
     return {
       datasets: [
         {
-          label: "Count of Different Types of URLS",
+          label: "Counts of Different URL Types",
           tension: 0.3,
           data: scores,
           borderColor: "rgb(75, 192, 192)",
-          backgroundColor: "rgba(75, 192, 192, 0.3)",
+          backgroundColor: ["#428bca", "#5cb85c", "#5bc0de", "#d9534f"],
         },
       ],
       labels,
