@@ -30,6 +30,7 @@ import Summary from './Summary';
 import LimitationsFuture from './LimitationsFuture';
 import Introduction from './Introduction';
 import Technology from './Technology';
+import PredictionTool from './PredictionTool';
 import Footer from './Footer';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -193,6 +194,17 @@ function App() {
         </div>
 
         <hr className='horizontalBar' />
+
+        
+        <div className='homeContainers'>
+
+<PredictionTool />
+
+</div>
+
+<hr className='horizontalBar' />
+
+
 
 
         <div className='homeContainers'>

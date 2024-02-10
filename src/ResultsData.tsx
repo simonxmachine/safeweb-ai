@@ -6,9 +6,7 @@ const ResultsData = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="italic h2-bold">
-          Testing results and model evaluation...
-        </h2>
+        <h2 className="h2-bold">Testing results and model evaluation...</h2>
         <br />
         <p>
           XGBoost exhibits superior performance across multiple metrics. This
