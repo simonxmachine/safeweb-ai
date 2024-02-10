@@ -10,7 +10,10 @@ export default function Introduction() {
         <p>
           Malicious URLs are a serious threat to cybersecurity; they host
           unsolicited content and lure unsuspecting users to become victims of
-          scams, and cause losses of billions of dollars every year.
+          scams, and cause losses of billions of dollars every year. We built
+          this machine-learning powered application with the goal of mitigating
+          the damage perpetuated by malicious URLs; detailed below are the steps
+          we have taken so far...
         </p>
       </div>
 

@@ -100,9 +100,9 @@ const XgBoostPredict = () => {
         </button>
       </div>
       <div className="text-xs px-4 text-[#FFFF00]">
-        *This scanner is intended for educational and experimental purposes
-        only. It is not designed for real-world use, and its results should not
-        be relied upon for critical decisions.{" "}
+        *This scanner is intended for educational and experimental purposes. It
+        is not designed for real-world use, and its results should not be relied
+        upon for critical decisions.{" "}
       </div>
       <div className="text-sm">{formattedData}</div>
     </div>

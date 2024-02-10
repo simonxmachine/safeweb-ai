@@ -10,7 +10,7 @@ const DataframeTable = () => {
         } gap-10 justify-center items-center`}
       >
         <div className="w-[100%] text-left max-w-[600px]">
-          <h2 className="h2-bold">This is the original dataset... </h2>
+          <h2 className="h2-bold">Let's start with the original dataset... </h2>
           <br />
           <p>
             It consists of 651,191 rows of collected URLs that are classified as

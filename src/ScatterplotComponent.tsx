@@ -7,7 +7,7 @@ const ScatterplotComponent = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-10 max-w-[1050px] mobile-text">
-        <h2 className="h2-bold">Identifying abnormalities and outliers...</h2>
+        <h2 className="h2-bold">Identifying patterns and abnormalities...</h2>
         <br />
         <p>
           Notice the few sparse outliers in this sample taken from the dataset;

@@ -4,16 +4,14 @@ import trainingGif from "./assets/training.gif"; // Import your logo image
 const DataframeTable = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10 max-w-[700px] mobile-text">
-        <h2 className="h2-bold">
-          After cleaning the data and normalizing features, we can train and
-          test the models...
-        </h2>
+      <div className="mb-10 max-w-[1050px] mobile-text">
+        <h2 className="h2-bold">Training and testing the models...</h2>
         <br />
         <p>
-          We opted to implement XG-Boost and a multi-layer neural network as our
-          models due to their advanced architectures and powerful predicting
-          accuracy.
+          Our model selection was guided by the need for speed and performance;
+          gravitating us to XGBoost and a multi-layer neural network, both
+          renowned for their historical excellence in handling complex data
+          patterns and powerful predictive accuracy.
         </p>
       </div>
 
@@ -21,7 +19,7 @@ const DataframeTable = () => {
         <img
           src={trainingGif}
           alt="XG Boost Confusion Matrix"
-          className="w-[100%] max-w-[900px]"
+          className="w-[100%] max-w-[700px]"
         />
       </div>
     </div>
