@@ -28,10 +28,12 @@ body {
 .logo {
   height: 6em;
   min-height: 3em;
+  min-width: 190px;
   padding: 1.5em;
+  padding-left: 0em;
   will-change: filter;
   transition: filter 300ms;
-  animation: logo-spin 2s linear infinite;
+  /* animation: logo-spin 2s linear infinite; */
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

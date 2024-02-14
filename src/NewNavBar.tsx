@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./navbar.css";
-import logo from "./assets/react.svg";
+import logo from "./assets/safeweb_logo.png";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -54,7 +54,7 @@ const NewNavbar = ({
           </Link>
         </div>
 
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           <ul className="desktopMenuUl">
             <li>
               <a
@@ -127,7 +127,7 @@ const NewNavbar = ({
           </ul>
         </div>
 
-        <div className="burger-menu sm:hidden" onClick={updateMenu}>
+        <div className="burger-menu lg:hidden" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
           <div className={burger_class}></div>

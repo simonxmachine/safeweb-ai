@@ -9,9 +9,9 @@ const PredictionTool = () => {
         <h2 className="h2-bold">The resulting scanner...</h2>
         <br />
         <p>
-          The scanner on which this project is based on was built with machine
-          learning libraries in Python, packaged into a Docker container, and
-          hosted on AWS Elastic Container Service.
+          The scanner on which this project is based on was built in Python,
+          packaged into a Docker container, and hosted on AWS Elastic Container
+          Service.
           <br />
           <br />
           The resulting output for the user-inputted URL is headed by the
