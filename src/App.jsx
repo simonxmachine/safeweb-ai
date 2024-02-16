@@ -41,6 +41,8 @@ function App() {
   const [response, setResponse] = useState("This is standard response")
   const [activeSection, setActiveSection] = useState(null);
   const [ip, setIP] = useState("");
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
 
   const homeRef = useRef(null)
   const dataRef = useRef(null);
@@ -73,6 +75,8 @@ function App() {
     console.log(geolocationRes.data);
     const country = geolocationRes.data.country_name;
     const state = geolocationRes.data.region;
+    setCountry(country);
+    setState(state);
 
     console.log("Country:", country);
     console.log("State:", state);
@@ -145,6 +149,16 @@ function App() {
       <section ref={homeRef} id="home-section" className='headerBar' />
 
         <XgBoostPredict/>
+
+        Ip address: {ip} <br/>
+        Country: {country} <br/>
+        State: {state} <br/>
+        Current Site: {referrer} <br/>
+        Screen Size: {screen}<br/>
+        Orientation: {orientation}<br/>
+        Mobile? : {isMobile ? isMobile : "false"}<br/>
+        Browser: {navigator}<br/>
+
   
 
       <div className='homeContainers'>
