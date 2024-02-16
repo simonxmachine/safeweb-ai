@@ -33,12 +33,14 @@ import Technology from './Technology';
 import PredictionTool from './PredictionTool';
 import Footer from './Footer';
 import { Analytics } from '@vercel/analytics/react';
+import axios from "axios";
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [response, setResponse] = useState("This is standard response")
   const [activeSection, setActiveSection] = useState(null);
+  const [ip, setIP] = useState("");
 
   const homeRef = useRef(null)
   const dataRef = useRef(null);
@@ -46,6 +48,45 @@ function App() {
   const trainingRef = useRef(null);
   const evaluationRef = useRef(null);
   const chatbotRef = useRef(null);
+
+  const referrer = document.location.href;
+  const screen = window.screen.width;
+  const orientation = window.screen.orientation.type;
+  const isMobile = window.screen.width < 768;
+  const navigator = window.navigator.userAgent;
+  // const orientation = screen.orientation.type;
+  console.log("this is referrer:", referrer);
+  console.log("this is screen:", screen);
+  console.log("this is orientation:", orientation);
+  console.log("is it mobile:", isMobile);
+  console.log("navigator type:", navigator);
+
+  const getData = async () => {
+    const res = await axios.get("https://api.ipify.org/?format=json");
+    console.log(res.data);
+    setIP(res.data.ip);
+    console.log("this is the ip:", res.data.ip);
+    const ipAddress = res.data.ip;
+    
+// Fetch geolocation data using ipapi
+    const geolocationRes = await axios.get(`https://ipapi.co/${ipAddress}/json/`);
+    console.log(geolocationRes.data);
+    const country = geolocationRes.data.country_name;
+    const state = geolocationRes.data.region;
+
+    console.log("Country:", country);
+    console.log("State:", state);
+
+
+  };
+
+  useEffect(() => {
+    //passing getData method to the lifecycle method
+    getData();
+  }, []);
+
+
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -109,6 +150,8 @@ function App() {
       <div className='homeContainers'>
 
       <Introduction />
+
+
 
       </div>
 
