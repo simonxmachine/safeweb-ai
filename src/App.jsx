@@ -51,13 +51,14 @@ function App() {
   const evaluationRef = useRef(null);
   const chatbotRef = useRef(null);
 
-  const referrer = document.location.href;
+
+  const currentSite = document.location.href;
   const screen = window.screen.width;
   const orientation = window.screen.orientation.type;
   const isMobile = window.screen.width < 768;
   const navigator = window.navigator.userAgent;
   // const orientation = screen.orientation.type;
-  console.log("this is referrer:", referrer);
+
   console.log("this is screen:", screen);
   console.log("this is orientation:", orientation);
   console.log("is it mobile:", isMobile);
@@ -80,8 +81,6 @@ function App() {
 
     console.log("Country:", country);
     console.log("State:", state);
-
-
   };
 
   useEffect(() => {
@@ -89,6 +88,15 @@ function App() {
     getData();
   }, []);
 
+
+        // Ip address: {ip} <br/>
+        // Country: {country} <br/>
+        // State: {state} <br/>
+        // Current Site: {currentSite} <br/>
+        // Screen Size: {screen}<br/>
+        // Orientation: {orientation}<br/>
+        // Mobile? : {isMobile ? isMobile : "false"}<br/>
+        // Browser: {navigator}<br/>
 
 
 
@@ -149,15 +157,6 @@ function App() {
       <section ref={homeRef} id="home-section" className='headerBar' />
 
         <XgBoostPredict/>
-
-        Ip address: {ip} <br/>
-        Country: {country} <br/>
-        State: {state} <br/>
-        Current Site: {referrer} <br/>
-        Screen Size: {screen}<br/>
-        Orientation: {orientation}<br/>
-        Mobile? : {isMobile ? isMobile : "false"}<br/>
-        Browser: {navigator}<br/>
 
   
 
