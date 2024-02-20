@@ -163,7 +163,7 @@ function App() {
 
       <div className='homeContainers'>
 
-      <Introduction />ß
+      <Introduction />
 
 
 
