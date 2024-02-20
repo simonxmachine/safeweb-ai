@@ -34,6 +34,7 @@ import PredictionTool from './PredictionTool';
 import Footer from './Footer';
 import { Analytics } from '@vercel/analytics/react';
 import axios from "axios";
+import Form from './Form';
 
 
 function App() {
@@ -162,7 +163,15 @@ function App() {
 
       <div className='homeContainers'>
 
-      <Introduction />
+      <Introduction />ß
+
+
+
+      </div>
+
+      <div className='homeContainers'>
+
+      <Form />
 
 
 
