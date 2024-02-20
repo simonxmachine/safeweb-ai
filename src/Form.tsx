@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from 'react';
 import { AnalyticsBrowser } from '@segment/analytics-next'
 
-export const analytics = AnalyticsBrowser.load({ writeKey: 'DF3kz8benPtJUPILxy09J1siyltBAlEk' })
+export const analytics = AnalyticsBrowser.load({ writeKey: 'u4hbGHBJ3a2Rl3oXLem6I5YxsomyFF3l' })
 
 export default function Form() {
     const [name, setName] = useState("");
@@ -18,6 +18,9 @@ export default function Form() {
             otherinfo: 'otherinfo', 
             otherinfo2: 'otherinfo2', 
             otherinfo3: 'otherinfo3',
+            otherinfo4: 'otherinfo4',
+            otherinfo5: 'otherinfo5',
+
         })
     }
 
@@ -56,12 +59,12 @@ export default function Form() {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        onClick={buttonClicked}
+                        
                     />
 
 
 <br />
-                    <button type="submit">Submit</button>
+                    <button type="submit" onClick={buttonClicked}>Submit</button>
                 </form>
             </div>
         </div>
