@@ -16,7 +16,8 @@ export default function Form() {
             address: address,
             email: email, 
             otherinfo: 'otherinfo', 
-            otherinfo2: 'otherinfo2'
+            otherinfo2: 'otherinfo2', 
+            otherinfo3: 'otherinfo3',
         })
     }
 
