@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:5173', // Adjust origin as needed
+  origin: 'https://www.safeweb.ai/', // Adjust origin as needed
   optionsSuccessStatus: 200, // Explicitly define allowed methods, headers, etc.
 }));
 const port = 3000; // Customize port if needed
@@ -22,11 +22,13 @@ app.post('/submit-form', async (req, res) => {
     console.log(name, address, email);
 
     analytics.track({
-      anonymousId: '48d213bb-95c3-4f8d-af97-86b2b404dcfe',
+      anonymousId: '48d33523bb-95c3-4f8d-af97-86b2b404dcfe',
       event: 'Item Purchased',
       properties: {
         revenue: 39.95,
-        shippingMethod: '2-day'
+        shippingMethod: '2-day', 
+        name: name,
+        address: address,
       }
     });
     
