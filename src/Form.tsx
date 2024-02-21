@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect, useRef } from 'react';
-import axios from "axios";
 
 export default function Form() {
     const [name, setName] = useState("");
@@ -10,7 +9,7 @@ export default function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://www.safeweb.ai/submit-form", {
+            const response = await fetch("https://www.safeweb.ai", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

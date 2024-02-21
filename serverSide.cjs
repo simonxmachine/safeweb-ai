@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-  origin: 'https://www.safeweb.ai/', // Adjust origin as needed
+  origin: 'https://www.safeweb.ai', // Adjust origin as needed
   optionsSuccessStatus: 200, // Explicitly define allowed methods, headers, etc.
 }));
 const port = 3000; // Customize port if needed
@@ -13,7 +13,7 @@ app.use(express.json());
 const analytics = new Analytics({ writeKey: 'u4hbGHBJ3a2Rl3oXLem6I5YxsomyFF3l' }); // Replace with your Segment write key
 
 
-app.post('/submit-form', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     const { name, address, email } = req.body;
     console.log(name, address, email);
