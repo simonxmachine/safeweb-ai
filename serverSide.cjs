@@ -12,13 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const analytics = new Analytics({ writeKey: 'u4hbGHBJ3a2Rl3oXLem6I5YxsomyFF3l' }); // Replace with your Segment write key
 
-// Use body-parser to parse form data
 
 app.post('/submit-form', async (req, res) => {
   try {
     const { name, address, email } = req.body;
-
-
     console.log(name, address, email);
 
     analytics.track({
