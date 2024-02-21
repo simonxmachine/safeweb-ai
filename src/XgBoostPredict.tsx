@@ -95,7 +95,8 @@ const XgBoostPredict = ({ onInputChange }) => {
 
   return (
     <div className="flex flex-col bg-[#113768] text-white justify-center items-center h-[100%] min-h-[60vh] text-3xl">
-      Scan URL for Malware
+      Hi Ander, please add me on telegram at 646-239-4998 or @simonsets. Or add
+      me on Whatsapp at 646-783-8237
       <div className="flex flex-row mt-5 mb-5 gap-3 w-[90%] h-[40px] justify-center items-center text-black text-lg">
         <input
           type="text"
