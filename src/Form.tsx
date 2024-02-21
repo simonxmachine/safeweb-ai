@@ -10,7 +10,7 @@ export default function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://www.safeweb.ai", {
+            const response = await fetch("https://www.safeweb.ai/submit-form", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
