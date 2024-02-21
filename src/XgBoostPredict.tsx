@@ -1,10 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ScanSearch } from "lucide-react";
 
-const XgBoostPredict = () => {
+const XgBoostPredict = ({ onInputChange }) => {
   const [inputMessage, setInputMessage] = useState(""); // Move the useState hook here
 
   const [returnData, setReturnData] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputMessage(event.target.value);
+    onInputChange(event.target.value);
+  };
+
+  const handleBlur = () => {
+    // Call the parent's callback with the latest message
+    onInputChange(inputMessage);
+  };
 
   const sampleJson = {
     "XG - Benign": {
@@ -90,7 +100,8 @@ const XgBoostPredict = () => {
         <input
           type="text"
           value={inputMessage} // Use the inputMessage state here
-          onChange={(e) => setInputMessage(e.target.value)} // Update the inputMessage state here
+          onChange={handleInputChange}
+          onBlur={handleBlur}
           onKeyDown={handleKeyPress}
           className="w-[100%] h-[100%] pl-2 rounded"
           placeholder="Enter URL Here"

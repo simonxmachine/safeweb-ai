@@ -53,6 +53,8 @@ function App() {
   const chatbotRef = useRef(null);
 
 
+  const [currentMessage, setCurrentMessage] = useState("");
+
   const currentSite = document.location.href;
   const screen = window.screen.width;
   const orientation = window.screen.orientation.type;
@@ -60,10 +62,15 @@ function App() {
   const navigator = window.navigator.userAgent;
   // const orientation = screen.orientation.type;
 
-  console.log("this is screen:", screen);
-  console.log("this is orientation:", orientation);
-  console.log("is it mobile:", isMobile);
-  console.log("navigator type:", navigator);
+
+  const handleInputMessageChange = (newMessage) => {
+    setCurrentMessage(newMessage);
+  };
+
+  // console.log("this is screen:", screen);
+  // console.log("this is orientation:", orientation);
+  // console.log("is it mobile:", isMobile);
+  // console.log("navigator type:", navigator);
 
   const getData = async () => {
     const res = await axios.get("https://api.ipify.org/?format=json");
@@ -98,6 +105,8 @@ function App() {
         // Orientation: {orientation}<br/>
         // Mobile? : {isMobile ? isMobile : "false"}<br/>
         // Browser: {navigator}<br/>
+
+   
 
 
 
@@ -157,9 +166,9 @@ function App() {
 
       <section ref={homeRef} id="home-section" className='headerBar' />
 
-        <XgBoostPredict/>
+        <XgBoostPredict onInputChange={handleInputMessageChange}/>
 
-  
+
 
       <div className='homeContainers'>
 
