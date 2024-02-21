@@ -1,32 +1,32 @@
 import React from "react";
 import { useState, useEffect, useRef } from 'react';
-import { AnalyticsBrowser } from '@segment/analytics-next'
-
-export const analytics = AnalyticsBrowser.load({ writeKey: 'u4hbGHBJ3a2Rl3oXLem6I5YxsomyFF3l' })
+import axios from "axios";
 
 export default function Form() {
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
 
-    const buttonClicked = () => {
-
-        analytics.track('Form Submitted', {
-            name: name,
-            address: address,
-            email: email, 
-            otherinfo: 'otherinfo', 
-            otherinfo2: 'otherinfo2', 
-            otherinfo3: 'otherinfo3',
-            otherinfo4: 'otherinfo4',
-            otherinfo5: 'otherinfo5',
-
-        })
-    }
-
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
+        try {
+            const response = await fetch("http://localhost:3000/submit-form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, address, email })
+
+            });
+            if (response.ok) {
+                console.log("Registered Successfully");
+            } else {
+                console.log("Registration Failed");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+        
     };
 
     return (
@@ -64,7 +64,7 @@ export default function Form() {
 
 
 <br />
-                    <button type="submit" onClick={buttonClicked}>Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
