@@ -177,14 +177,14 @@ function App() {
 
 
       </div>
-
+{/* 
       <div className='homeContainers'>
 
       <Form />
 
 
 
-      </div>
+      </div> */}
 
 
       <hr ref={dataRef}  id="data-section" className='horizontalBar' />
