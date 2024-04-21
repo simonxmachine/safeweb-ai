@@ -172,7 +172,7 @@ nav a:hover {
   transition: right 0.5s ease-out; /* Ease-in for closing */
   z-index: 2;
   opacity: 0.9;
-  margin-top: 17px;
+  margin-top: 80px;
 }
 
 .menu {
@@ -188,7 +188,7 @@ nav a:hover {
   transition: right 0.3s ease-out; /* Add transitions */
   z-index: 5;
   opacity: 0.9;
-  margin-top: 17px;
+  margin-top: 80px;
 }
 
 /* ------------- sliding menu ------------------ */
